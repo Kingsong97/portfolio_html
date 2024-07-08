@@ -1,0 +1,77 @@
+#footer {
+    width: 100%;
+    height: 50px;
+ 
+    .marquee {
+      color: #fefefe;
+      font-size: var(--step-0);
+      height: 100%; // 푸터의 높이와 동일하게 설정
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      align-items: center;
+    }
+    
+    .track {
+      height: 100%; // 부모 요소의 높이와 동일하게 설정
+      overflow: hidden;
+      position: absolute;
+      transition: background-color 300ms ease, color 300ms ease;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+  
+      .text {
+        font-size: 2rem;
+        animation: marquee 50000ms linear infinite;
+        align-items: center;
+        display: inline-flex;
+        will-change: transform;
+        color: var(--pointColor01);
+  
+        &.-r {
+          animation-name: marquee-r;
+        }
+  
+        &.-twox {
+          animation-duration: 25000ms;
+        }
+      }
+    }
+  
+    .-green {
+      color: var(--pointColor01);
+      font-weight: 900;
+      margin: 0 1rem;
+    }
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee-r {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes rollCage {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(5turn);
+    }
+  }
+  
+  
+  

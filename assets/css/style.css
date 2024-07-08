@@ -1,0 +1,226 @@
+:root {
+  --fontP: "PP NeueBit";
+  --fontPP: "PP Supply Mono";
+  --mainBg: #111;
+  --mainBg02: #45292F;
+  --mainBg03: #2C311F;
+  --mainBg04: #21312D;
+  --mainBg05: #312C3E;
+  --pointBg: #ededff;
+  --pointColor01: #777764;
+  --pointColor02: #FFACAC;
+  --black: #000;
+  --black100: #111;
+  --black200: #222;
+  --black300: #333;
+  --black400: #444;
+  --black500: #555;
+  --black600: #666;
+  --black700: #797979;
+  --white: #fff;
+  --white100: #f9f9f9;
+  --white200: #eeeeee;
+  --white300: #dfdfdf;
+  --white400: #cfcfcf;
+  --white500: #c0c0c0;
+  --white600: #b5b5b5;
+  --step--2: clamp(3.13rem, 2.62rem + 2.51vw, 5.76rem);
+  --step--1: clamp(3.75rem, 3.09rem + 3.29vw, 7.20rem);
+  --step-0: clamp(4.50rem, 3.64rem + 4.29vw, 9.00rem);
+}
+
+#mosaic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  z-index: 1000;
+  /* Ensure it's on top */
+}
+
+#mosaic .piece {
+  background-color: var(--pointColor01);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--mainBg);
+  text-decoration: none;
+  list-style: none;
+}
+
+#main {
+  width: 100%;
+  height: calc(100vh - 150px);
+}
+
+.noise {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background-image: url(../img/noise.gif);
+  background-position: 0 0;
+  background-size: auto;
+  pointer-events: none;
+  opacity: 0.05;
+  transition: opacity 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  visibility: visible;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  color: var(--pointColor01);
+  font-family: var(--fontP);
+}
+#header .header_inner {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#header .header_inner .logo {
+  width: 130px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-right: auto;
+}
+#header .header_inner .nav {
+  border: 1px solid var(--pointColor01);
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+}
+#header .header_inner .nav ul {
+  display: flex;
+}
+#header .header_inner .nav ul li {
+  margin-right: 10px;
+  opacity: 0.5;
+}
+#header .header_inner .nav ul li:hover {
+  opacity: 1;
+}
+#header .header_inner .nav ul li a {
+  color: var(--pointColor01);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+#header .header_inner .color {
+  margin-left: auto;
+  border: none;
+}
+#header .header_inner .color img {
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  color: var(--pointColor01);
+}
+.intro p {
+  text-transform: uppercase;
+  margin-right: 4rem;
+  font-size: 8rem;
+  font-family: var(--fontP);
+  opacity: 0.5;
+}
+.intro .active {
+  opacity: 1;
+}
+
+.intro_detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: var(--pointColor01);
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: var(--fontPP);
+}
+
+#footer {
+  width: 100%;
+  height: 50px;
+}
+#footer .marquee {
+  color: #fefefe;
+  font-size: var(--step-0);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+#footer .track {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  transition: background-color 300ms ease, color 300ms ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+#footer .track .text {
+  font-size: 2rem;
+  animation: marquee 50000ms linear infinite;
+  align-items: center;
+  display: inline-flex;
+  will-change: transform;
+  color: var(--pointColor01);
+}
+#footer .track .text.-r {
+  animation-name: marquee-r;
+}
+#footer .track .text.-twox {
+  animation-duration: 25000ms;
+}
+#footer .-green {
+  color: var(--pointColor01);
+  font-weight: 900;
+  margin: 0 1rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee-r {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes rollCage {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(5turn);
+  }
+}/*# sourceMappingURL=style.css.map */

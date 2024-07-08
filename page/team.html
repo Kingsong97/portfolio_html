@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script src="../assets/js/color.js"></script>
+    <script src="../assets/js/transition.js"></script>
+
+    <style>
+        .title {
+            margin: 0 1rem;
+            font-family: var(--fontP);
+            text-transform: uppercase;
+            font-size: 10rem;
+            color: var(--pointColor01);
+        }
+
+        .work_horizontal {
+            margin: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .test_work {
+            width: 25vw;
+            height: 50vh;
+        }
+
+        .test_box {
+            background-color: rgba(119, 119, 100, 0.5);
+            color: var(--white);
+            position: relative;
+            display: flex;
+        }
+
+        .test_box h4 {
+            position: absolute;
+            text-transform: uppercase;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(119, 119, 100, 0.5);
+        }
+
+        .test_box p {
+            position: absolute;
+            text-transform: uppercase;
+            bottom: 100px;
+            left: 10px;
+            background-color: rgba(119, 119, 100, 0.5);
+        }
+
+        .test_box span {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 10px;
+            background-color: rgba(119, 119, 100, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="noise"></div>
+    <header id="header">
+        <div class="header_inner">
+            <h1 class="logo">
+                developer<br />
+                portfolio
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">001/Main</a></li>
+                    <li><a href="work.html">002/Work</a></li>
+                    <li><a href="team.html">003/Team</a></li>
+                    <li><a href="/">004/Comment</a></li>
+                    <li><a href="/">005/Contact</a></li>
+                </ul>
+            </nav>
+            <button class="color">
+                <img src="../assets/img/svg/eyes.svg" alt="eyes">
+            </button>
+        </div>
+    </header>
+    <main id="main">
+        <h1 class="title">team</h1>
+        <div class="work_horizontal">
+            <img src="../assets/img/송성민3.jpg" alt="" class="test_work">
+            <div class="test_work test_box">
+                <h4>001 : react</h4>
+                <p>frontend Project</p>
+                <span>리액트로 노드를 이용한 첫 번째 프로젝트입니다.<br> 처음이라 어려움이 많았지만..<br> 자바스크립트를 어쩌구</span>
+            </div>
+            <img src="../assets/img/송성민3.jpg" alt="" class="test_work">
+            <div class="test_work test_box">
+                <h4>001 : react</h4>
+                <p>frontend Project</p>
+                <span>리액트로 노드를 이용한 첫 번째 프로젝트입니다.<br> 처음이라 어려움이 많았지만..<br> 자바스크립트를 어쩌구</span>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="marquee">
+            <div class="track">
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+                <span class="text -twox">ARE YOU SURE?<span class="-green">I CAN DO IT!</span></span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
