@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             if (index === elements.length - 1) {
                                 setTimeout(() => {
                                     window.location.href = url; // 페이지 이동
-                                }, 2000); // 페이지 이동을 2초 지연
+                                }, 500); // 모자이크가 화면을 채우는 애니메이션의 지속 시간
                             }
                         }
                     });
@@ -58,29 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         return array;
     }
+    window.addEventListener('popstate', function () {
+        location.reload();
+    });
 
     addLinkEventListeners();
 });
 
-function applyPageLoadAnimation() {
+
+document.addEventListener("DOMContentLoaded", function () {
     const mosaic = document.querySelector('.transition-container');
-    if (!mosaic) return;
-
     const elements = Array.from(mosaic.querySelectorAll('.tile'));
-    mosaic.style.display = 'block'; // 모자이크를 화면에 표시
-    elements.forEach((el, index) => {
-        gsap.to(el, {
-            duration: 0.5,
-            opacity: 0,
-            delay: index * 0.02,
-            onComplete: () => {
-                if (index === elements.length - 1) {
-                    mosaic.style.display = 'none'; // 모든 타일이 제거되면 모자이크를 숨김
-                }
-            }
-        });
-    });
-}
 
-document.addEventListener("DOMContentLoaded", applyPageLoadAnimation);
-window.addEventListener("load", applyPageLoadAnimation);
+    function applyPageLoadAnimation() {
+        mosaic.style.display = 'block'; // 모자이크를 화면에 표시
+        mosaic.classList.add('hide-mosaic'); // 모자이크를 숨기는 클래스 추가
+    }
+
+    applyPageLoadAnimation();
+});
