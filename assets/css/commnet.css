@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'PP NeueBit';
+    color: #FFACAC;
+    font-size: 18px;
+    line-height: 0.8;
+    margin: 20px;
+    padding-left: 30px;
+}
+
+#header h1::before {
+    content: '';
+    background-image: url(../img/star2.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#header h1 span {
+    display: block;
+}
+
+#header nav {
+    border: 1px solid #ffacac93;
+    padding: 0.8rem 2.2rem;
+    border-radius: 100px;
+}
+
+#header nav ul {
+    display: flex;
+}
+
+#header nav li {
+    color: #FFACAC;
+}
+
+#header nav li a {
+    padding: 10px;
+    font-family: 'PP NeueBit';
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+#header nav li.active a {
+    opacity: 1;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+#main::after {
+    content: '';
+    width: 100%;
+    height: 300vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../img/noise.gif);
+    opacity: 0.051;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.section01,
+.section02,
+.section03,
+.section04 {
+    width: 100%;
+    height: 100vh;
+    /* 뷰포트 높이와 동일하게 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #FFACAC;
+}
+
+.section01 {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    position: relative;
+    font-family: "PP NeueBit";
+}
+
+.section01 .img_center {
+    width: 20vw;
+    height: 50vh;
+    display: inline-block;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    position: relative;
+    z-index: 1;
+    /* 이미지가 더 낮은 레이어에 위치하도록 설정 */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* 텍스트가 더 높은 레이어에 위치하도록 설정 */
+}
+
+.text-overlay p {
+    color: #FFACAC;
+    /* 텍스트 색상을 설정 */
+    font-size: 10rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* 텍스트 가독성을 높이기 위해 그림자 추가 */
+    white-space: nowrap;
+    /* 텍스트가 줄 바꿈 없이 한 줄로 표시되도록 설정 */
+    line-height: 0.8;
+}
+
+.section02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    gap: 5rem;
+    /* 각 요소 간의 간격을 조정 */
+}
+
+.section02 .left_01,
+.section02 .left_02,
+.section02 .right_01,
+.section02 .right_02 {
+    flex: 1 1 45%;
+    /* 각 요소가 화면의 45% 너비를 차지하도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'IropkeBatang';
+}
+
+.section02 .left_01 img,
+.section02 .right_02 img {
+    max-width: 30%;
+    /* 이미지를 컨테이너 크기에 맞게 조정 */
+    height: auto;
+    border-radius: 10px;
+    /* 이미지의 모서리를 둥글게 설정 */
+}
+
+.section02 .left_01,
+.section02 .right_02 {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+    .section02 .left_01,
+    .section02 .left_02,
+    .section02 .right_01,
+    .section02 .right_02 {
+        flex: 1 1 100%;
+        /* 작은 화면에서는 각 요소가 전체 너비를 차지하도록 설정 */
+    }
+}
+
+.section03 {
+    background: #111;
+    position: relative;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee-r {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rollCage {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(5turn);
+    }
+}
+
+.head_line {
+    position: absolute;
+    top: 0;
+}
+
+.marquee {
+    color: #FFACAC;
+    font-size: 10rem;
+    height: calc(170px + 4rem);
+    overflow: hidden;
+    position: relative;
+    width: 99vw;
+    font-family: 'PP NeueBit';
+}
+
+.track {
+    height: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    position: absolute;
+    transition: background-color 300ms ease, color 300ms ease;
+    white-space: nowrap;
+}
+
+.track .head_text {
+    animation: marquee 50000ms linear infinite;
+    align-items: center;
+    display: inline-flex;
+    will-change: transform;
+}
+
+.track .head_text.-r {
+    animation-name: marquee-r;
+}
+
+.track .head_text.-twox {
+    animation-duration: 25000ms;
+}
+
+.-green {
+    color: #FFACAC;
+    font-weight: 900;
+}
+
+.about_detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PP Supply Mono';
+}
+
+.img_center03 img {
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
+}
+
+.send_email {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    border: 1px solid #FFACAC;
+    border-radius: 100px;
+}
+
+.sns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.sns .sns_left {
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 1rem;
+}
+
+.insta,
+.github {
+    border: 1px solid #FFACAC;
+    border-radius: 100px;
+    padding: 0.4rem;
+}
+
+.sns .sns_right {
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+    /* 인스타그램과 깃허브 사이의 간격 */
+}
+
+.section04 {
+    background: #ff69b4;
+}
+
+
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    color: #FFACAC;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.container-animation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20000;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: start;
+    pointer-events: none;
+}
+
+.container-animation.start span {
+    background-color: #ffacac;
+}
+
+.container-animation span {
+    width: 10%;
+    height: 10vh;
+}

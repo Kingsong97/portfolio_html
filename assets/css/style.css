@@ -489,45 +489,25 @@ body {
 }
 
 
-.transition-container {
+.container-animation {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    z-index: 20000;
     display: flex;
     flex-wrap: wrap;
-    z-index: 1001;
+    align-content: start;
+    justify-content: start;
     pointer-events: none;
 }
 
-.transition-container span {
-    position: absolute;
-    background: #FFACAC;
-    width: 6.25%;
-    /* 16개의 가로 타일 */
-    height: 8.33%;
-    /* 12개의 세로 타일 */
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.container-animation.start span {
+    background-color: #ffacac;
 }
 
-.tile {
-    position: absolute;
-    background-color: black;
-    opacity: 0;
-}
-
-.transition-container.from-top .tile {
-    opacity: 0;
-}
-
-.transition-container.from-top.show .tile {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.transition-container.hide-mosaic .tile {
-    opacity: 0;
-    transition: opacity 0.5s ease 0.02s;
+.container-animation span {
+    width: 10%;
+    height: 10vh;
 }

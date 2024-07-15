@@ -37,4 +37,12 @@ window.onload = function () {
             }, 3000);
         });
     });
+
+    const container = document.querySelector(".container-animation");
+
+    gsap.to(".container-animation span", {
+        stagger: { amount: 0.8, from: "random" },
+        backgroundColor: "transparent",
+        duration: 3
+    });
 }
