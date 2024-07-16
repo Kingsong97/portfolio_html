@@ -293,62 +293,55 @@
     </script>
 
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
 
-        // 이미지 페이드 인 및 확대 애니메이션
-        gsap.from(".img_center03 img", {
-            opacity: 0,
-            scale: 0.5,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".img_center03",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: true
-            }
+            // 이미지 페이드 인 및 확대 애니메이션
+            gsap.from(".section03 .img_center03 img", {
+                opacity: 0,
+                scale: 0.5,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".section03",
+                    start: "top bottom", // 섹션의 상단이 뷰포트의 하단에 도달할 때 시작
+                    end: "top center", // 섹션의 상단이 뷰포트의 중앙에 도달할 때 끝
+                    scrub: true, // 스크롤 위치에 따라 애니메이션이 진행됨
+                    markers: true // 시작 및 끝 지점을 시각화
+                }
+            });
+
+            // 각 글자가 떨어지는 애니메이션
+            gsap.from(".section03 .send_email", {
+                y: -100,
+                opacity: 0,
+                duration: 1,
+                ease: "bounce.out",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: ".section03",
+                    start: "top bottom",
+                    end: "top center",
+                    scrub: true,
+                    markers: true
+                }
+            });
+
+            gsap.from(".section03 .sns_left, .section03 .sns_right", {
+                y: -100,
+                opacity: 0,
+                duration: 1,
+                ease: "bounce.out",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: ".section03",
+                    start: "top bottom",
+                    end: "top center",
+                    scrub: true,
+                    markers: true
+                }
+            });
         });
-
-        // 텍스트 슬라이드 인 애니메이션
-        gsap.from(".send_email", {
-            opacity: 0,
-            x: -100,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".send_email",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: true
-            }
-        });
-
-        // SNS 요소 페이드 인 및 슬라이드 업 애니메이션
-        // gsap.from(".sns_left", {
-        //     opacity: 0,
-        //     y: 50,
-        //     duration: 1,
-        //     ease: "power3.out",
-        //     scrollTrigger: {
-        //         trigger: ".sns_left",
-        //         start: "top 80%",
-        //         end: "bottom 20%",
-        //         scrub: true
-        //     }
-        // });
-
-        // gsap.from(".sns_right", {
-        //     opacity: 0,
-        //     y: 50,
-        //     duration: 1,
-        //     ease: "power3.out",
-        //     scrollTrigger: {
-        //         trigger: ".sns_right",
-        //         start: "top 80%",
-        //         end: "bottom 20%",
-        //         scrub: true
-        //     }
-        // });
     </script>
 </body>
 
