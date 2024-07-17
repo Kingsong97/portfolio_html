@@ -37,59 +37,109 @@
         <!-- //header -->
 
         <main id="section1">
-            <div class="top">
-                <div class="menu">
-                    <div class="menu--wrapper">
-                        <div class="menu--item">
-                            <figure><img
-                                    src="https://images.unsplash.com/photo-1595265677860-9a3168007dc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt="" /></figure>
+            <nav class="nav nav--left js-nav">
+                <ul>
+                    <li><a href="#"><span>Mens</span></a></li>
+                    <li><a href="#"><span>Womens</span></a></li>
+                    <li><a href="#" class="is-active"><span>Collections</span></a></li>
+                </ul>
+            </nav>
+            <figure class="logo">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/logo_copy_copy.svg">
+            </figure>
+            <nav class="nav nav--right">
+                <ul>
+                    <li><a href="https://twitter.com/Jesper_Landberg?lang=en" target="_blank"><span>Say hi</span></a>
+                    </li>
+                    <li><a href="#"><span>Cart</span>
+                            <div class="cart-total">0</div>
+                        </a></li>
+                </ul>
+            </nav>
+            <div class="slider js-slider">
+                <div class="slider__inner js-slider__inner"></div>
+                <div class="slide js-slide">
+                    <div class="slide__content">
+                        <figure class="slide__img js-slide__img">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo1.jpg">
+                            <figcaption>
+                                <h3>Black is<em>timeless</em></h3>
+                            </figcaption>
+                        </figure>
+                        <figure class="slide__img js-slide__img">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo2.jpg">
+                            <figcaption>
+                                <h3>Black is<em>timeless</em></h3>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="slider__text js-slider__text">
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>Black is</div>
                         </div>
-
-                        <div class="menu--item">
-                            <figure><img
-                                    src="https://images.unsplash.com/photo-1594786118579-95ba90c801ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt="" /></figure>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>timeless. Black is</div>
                         </div>
-
-                        <div class="menu--item">
-                            <figure><img
-                                    src="https://images.unsplash.com/photo-1509339022327-1e1e25360a41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt="" /></figure>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>the colour of</div>
                         </div>
-
-                        <div class="menu--item">
-                            <figure><img
-                                    src="https://images.unsplash.com/photo-1525417071002-5ee4e6bb44f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt="" /></figure>
-                        </div>
-
-                        <div class="menu--item">
-                            <figure><img
-                                    src="https://images.unsplash.com/photo-1594072702031-f0e2a602dd2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt="" /></figure>
-                        </div>
-
-                        <div class="menu--item">
-                            <figure><img
-                                    src="https://images.unsplash.com/photo-1592989819277-a3aafa40c66a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt="" /></figure>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>Eternity.</div>
                         </div>
                     </div>
                 </div>
+                <div class="slide js-slide">
+                    <div class="slide__content">
+                        <figure class="slide__img js-slide__img">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo3.jpg">
+                        </figure>
+                        <figure class="slide__img js-slide__img">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo4.jpg">
+                        </figure>
+                    </div>
+                    <div class="slider__text js-slider__text">
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>white is</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>timeless. Black is</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>the colour of</div>
+                        </div>
+                        <div class="slider__text-line js-slider__text-line">
+                            <div>Eternity.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide js-slide">
+                    <div class="slide__content">
+                        <figure class="slide__img js-slide__img">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo5.jpg">
+                        </figure>
+                        <figure class="slide__img js-slide__img">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/photo6.jpg">
+                        </figure>
+                    </div>
+                </div>
+                <nav class="slider__nav js-slider__nav">
+                    <div class="slider-bullet js-slider-bullet">
+                        <span class="slider-bullet__text js-slider-bullet__text">01</span>
+                        <span class="slider-bullet__line js-slider-bullet__line"></span>
+                    </div>
+                    <div class="slider-bullet js-slider-bullet">
+                        <span class="slider-bullet__text js-slider-bullet__text">02</span>
+                        <span class="slider-bullet__line js-slider-bullet__line"></span>
+                    </div>
+                    <div class="slider-bullet js-slider-bullet">
+                        <span class="slider-bullet__text js-slider-bullet__text">03</span>
+                        <span class="slider-bullet__line js-slider-bullet__line"></span>
+                    </div>
+                </nav>
+                <div class="scroll js-scroll">Scroll</div>
             </div>
-            <div class="bom">
-                <div class="title">
-                    <span>work</span>
-                    <span>portfolio</span>
-                    <span>about</span>
-                </div>
-                <div class="desc">
-                    아직 부족한 부분이 많다 생각하여 스터디 모임에 참여했습니다.<br>
-                    하루 8시간씩 공부하며 나머지 3개의 사이트와 메인 포트폴리오를 제작했습니다.<br>
-                    저처럼 추가적으로 포트폴리오를 만들고 공부를 하기 위한<br>
-                    취업하신 참여하신 분들도 계셨습니다.
-                </div>
+            <div class="vert-text">
+                <span>Wings+Horns<br>X Kyoto Black</span>
             </div>
         </main>
         <!-- //section1 -->
@@ -129,7 +179,10 @@
     <script src="assets/js/slide.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://unpkg.com/split-type"></script>
-    <script src="assets/js/transition3.js"></script>
+    <!-- <script src="assets/js/transition3.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+    <script src="assets/js/work.js"></script>
     <script>
 
     </script>
