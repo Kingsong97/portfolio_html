@@ -6,8 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --text-color: #111;
+            --bg-color: #b9b3a9;
+        }
+
+        body {
+            transition: 0.3s ease-out;
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+            overscroll-behavior: none;
+        }
+
+        section:not(#sectionPin) {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 2rem;
+            padding: 50px 10vw;
+            margin: auto;
+            place-items: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: absolute;
+            top: 10vw;
+            left: 10vw;
+            z-index: 4;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 16vw;
+            }
+        }
+
+        h1 span {
+            display: block;
+        }
+
+        h2 {
+            font-size: 2rem;
+            max-width: 400px;
+        }
+
+        .credit {
+            font-family: Termina, sans-serif;
+        }
+
+        .credit a {
+            color: var(--text-color);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #sectionPin {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            left: 0;
+            background: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        .pin-wrap {
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 50px 10vw;
+        }
+
+        .pin-wrap>* {
+            min-width: 60vw;
+            padding: 0 5vw;
+        }
+
+        p {
+            position: absolute;
+            bottom: 10vw;
+            right: 10vw;
+            width: 200px;
+            line-height: 1.5;
+        }
+
+        img {
+            height: 80vh;
+            width: auto;
+            object-fit: cover;
+        }
+
+        .container-animation span {
+            width: 10%;
+            height: 10vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,74 +131,128 @@
             <span>DEVELOPER</span>
             <span>PORTFOLIO</span>
         </h1>
-        <nav>
+        <nav class="nav nav--left js-nav">
             <ul>
-                <li class="active"><a href="../index.html">001/Main</a></li>
-                <li><a href="page/work.html">002/Work</a></li>
-                <li><a href="#">003/Team</a></li>
-                <li><a href="#">004/Comment</a></li>
-                <li><a href="#">005/Contact</a></li>
+                <li><a href="#" class="is-active"><span>Works</span></a></li>
+                <li><a href="pages/work.html"><span>About</span></a></li>
+                <li><a href="#"><span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav nav--right">
+            <ul>
+                <div class="cart-total">0</div>
             </ul>
         </nav>
     </header>
     <!-- //header -->
 
-    <main id="section1">
-        <div class="top">
-            <div class="menu">
+    <main id="main">
+        <div class="container">
+            <section>
+                <div>
+                    <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span>
+                        <span>section</span>
+                    </h1>
+                    <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">with GSAP ScrollTrigger & Locomotive
+                        Scroll</p>
+                </div>
 
-            </div>
-        </div>
-        <div class="bom">
-            <div class="title">
-                <span>work</span>
-                <span>portfolio</span>
-                <span>about</span>
-            </div>
-            <div class="desc">
-                아직 부족한 부분이 많다 생각하여 스터디 모임에 참여했습니다.<br>
-                하루 8시간씩 공부하며 나머지 3개의 사이트와 메인 포트폴리오를 제작했습니다.<br>
-                저처럼 추가적으로 포트폴리오를 만들고 공부를 하기 위한<br>
-                취업하신 참여하신 분들도 계셨습니다.
-            </div>
+            </section>
+
+            <section id="sectionPin">
+                <div class="pin-wrap">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</h2>
+                    <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+                        alt="">
+                    <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+                        alt="">
+                    <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+                        alt="">
+
+                </div>
+            </section>
+            <section><img
+                    src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                    alt="">
+                <h2 data-scroll data-scroll-speed="1" class="credit"><a href="https://thisisadvantage.com"
+                        target="_blank">Made by Advantage</a></h2>
+            </section>
         </div>
     </main>
     <!-- //section1 -->
 
     <footer id="footer">
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
+        <span>Never Give Up</span>
     </footer>
     <!-- //footer -->
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-    <script src="assets/js/slide.js"></script>
-    <script src="assets/js/transition.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+
 
     <script>
+        // Initialize Locomotive Scroll
+        const locoScroll = new LocomotiveScroll({
+            el: document.querySelector("#main"),
+            smooth: true
+        });
 
+        // Update ScrollTrigger on Locomotive Scroll update
+        locoScroll.on("scroll", ScrollTrigger.update);
+
+        // Setup ScrollTrigger proxy for Locomotive Scroll
+        ScrollTrigger.scrollerProxy("#main", {
+            scrollTop(value) {
+                return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+            },
+            pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+        });
+
+        // Horizontal scrolling for #sectionPin
+        gsap.to(".pin-wrap", {
+            xPercent: -100 * (document.querySelectorAll(".pin-wrap > *").length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#sectionPin",
+                scroller: "#main",
+                pin: true,
+                scrub: 1,
+                snap: 1 / (document.querySelectorAll(".pin-wrap > *").length - 1),
+                end: () => "+=" + document.querySelector("#sectionPin").offsetWidth
+            }
+        });
+
+        // Refresh ScrollTrigger and Locomotive Scroll
+        ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+        ScrollTrigger.refresh();
     </script>
 </body>
 
