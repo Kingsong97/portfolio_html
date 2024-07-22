@@ -170,6 +170,7 @@ li {
     transform: rotate(-90deg) translateY(15rem);
     transform-origin: bottom left;
     font-size: 2.5rem;
+    word-spacing: 0.5rem;
     font-family: 'PP NeueBit';
 }
 
@@ -330,6 +331,23 @@ li {
 
 }
 
+.slide__img figcaption .work_link {
+    margin-top: 3rem;
+}
+
+.slide__img figcaption .work_link a {
+    border: 1px solid #fff;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.3rem;
+}
+
+.slide__img figcaption .work_link a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* before, after 가상 요소 추가 */
 .slide__img:before,
 .slide__img:after {
@@ -345,6 +363,7 @@ li {
     transition: all 0.3s ease;
     z-index: 1;
     opacity: 0;
+    pointer-events: none;
 }
 
 .slide__img:before {
