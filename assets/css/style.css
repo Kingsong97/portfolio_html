@@ -77,7 +77,7 @@ body {
     display: flex;
     align-items: center;
     font-size: calc(0.5rem + 0.35vw);
-    font-family: 'helvetica neue', helvetica, sans-serif;
+    font-family: 'PP Supply Mono';
 }
 
 .nav a span {
@@ -272,6 +272,8 @@ li {
     min-width: 12.5rem;
     transform-origin: top;
     overflow: hidden;
+    filter: grayscale(1);
+    transition: 0.3s;
 }
 
 .slide__img:first-child {
@@ -325,6 +327,7 @@ li {
     font-weight: bold;
     letter-spacing: 1px;
     font-weight: 700;
+
 }
 
 /* before, after 가상 요소 추가 */
@@ -353,6 +356,10 @@ li {
 }
 
 /* 호버 시 적용되는 스타일 */
+.slide__img:hover {
+    filter: grayscale(0);
+}
+
 .slide__img:hover:before,
 .slide__img:hover:after {
     opacity: 1;

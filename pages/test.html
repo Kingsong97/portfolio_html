@@ -5,114 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <style>
         :root {
-            --text-color: #111;
-            --bg-color: #b9b3a9;
+            --primary: #44b9cd;
         }
 
-        body {
-            transition: 0.3s ease-out;
-            overflow-x: hidden;
-            max-width: 100%;
-            width: 100%;
-            overscroll-behavior: none;
-        }
-
-        section:not(#sectionPin) {
-            min-height: 100vh;
-            width: 100%;
+        #inc03 {
             position: relative;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-gap: 2rem;
-            padding: 50px 10vw;
-            margin: auto;
-            place-items: center;
+            height: 100vh;
+            font-size: 16px;
+            color: #777;
+            line-height: 1.8;
+            letter-spacing: -0.3px;
+            font-family: 'Pretendard';
         }
 
-        h1 {
+        #inc03 .tit_area {
+            position: relative;
+            max-width: 1600px;
+            margin: 0 auto 5vh;
+            padding-top: 12vh;
+        }
+
+        #inc03 .tit_area .tit {
+            font-family: 'PP NeueBit';
             font-size: 5rem;
-            line-height: 1;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            position: absolute;
-            top: 10vw;
-            left: 10vw;
-            z-index: 4;
-            overflow-wrap: break-word;
-            hyphens: auto;
+            color: #ffacac76;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 16vw;
-            }
+        #inc03 .tit_area .tit span {
+            color: #FFACAC;
         }
 
-        h1 span {
+        #inc03 .tit_area .txt {
+            font-size: 1.2rem;
+            color: #777;
+            white-space: pre-line;
+            font-family: 'maruBuri';
+        }
+
+        #inc03 .img_slide_wrap {
+            padding-bottom: 30px;
+        }
+
+        #inc03 ul {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-left: calc((100% - 1600px) / 2);
+        }
+
+        #inc03 ul li {
+            transition: all 0.3s;
+        }
+
+        #inc03 ul li+li {
+            margin-left: 175px;
+        }
+
+        #inc03 ul li:nth-child(odd) a {
+            width: 750px;
+            height: 52vh;
+        }
+
+        #inc03 ul li:nth-child(even) {
+            margin-top: -150px;
+        }
+
+        #inc03 ul li:nth-child(even) a {
+            width: 445px;
+            height: 55vh;
+        }
+
+        #inc03 ul li:hover {
+            transform: translate(-10px, -10px);
+        }
+
+        #inc03 ul li a {
             display: block;
+            position: relative;
+            transition: all 0.3s;
         }
 
-        h2 {
-            font-size: 2rem;
-            max-width: 400px;
-        }
-
-        .credit {
-            font-family: Termina, sans-serif;
-        }
-
-        .credit a {
-            color: var(--text-color);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        #sectionPin {
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            left: 0;
-            background: var(--text-color);
-            color: var(--bg-color);
-        }
-
-        .pin-wrap {
-            height: 100vh;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 50px 10vw;
-        }
-
-        .pin-wrap>* {
-            min-width: 60vw;
-            padding: 0 5vw;
-        }
-
-        p {
+        #inc03 ul li a:after {
+            display: block;
+            content: "";
             position: absolute;
-            bottom: 10vw;
-            right: 10vw;
-            width: 200px;
-            line-height: 1.5;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: rgb(1, 1, 1);
+            background: linear-gradient(0deg, rgba(1, 1, 1, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+            transition: all 0.25s;
         }
 
-        img {
-            height: 80vh;
-            width: auto;
+        #inc03 ul li a:hover {
+            box-shadow: 25px 25px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        #inc03 ul li .txt {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            width: 100%;
+            padding: 0 0 60px 55px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        #inc03 ul li .txt p {
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        #inc03 ul li .txt div {
+            white-space: pre-line;
+        }
+
+        #inc03 ul li img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
-        .container-animation span {
-            width: 10%;
-            height: 10vh;
+        #inc03 .bg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        #inc03 .bg .flow_txt {
+            position: relative;
+            z-index: -2;
+            opacity: 0.15;
+            font-size: 190px;
+            font-weight: 700;
+            color: #FFACAC;
+            line-height: 0.65;
+            white-space: nowrap;
+            animation: flow 30s linear infinite;
+            font-family: "Lexend";
+        }
+
+        @keyframes flow {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        #inc03 .bg .box {
+            width: 100%;
+            height: 30vh;
         }
     </style>
 </head>
@@ -133,12 +189,11 @@
         </h1>
         <nav class="nav nav--left js-nav">
             <ul>
-                <li><a href="#" class="is-active"><span>Works</span></a></li>
-                <li><a href="pages/work.html"><span>About</span></a></li>
-                <li><a href="#"><span>Contact</span></a></li>
+                <li><a href="../index.html"><span>Works</span></a></li>
+                <li><a href="#" class="is-active"><span>About</span></a></li>
+                <li><a href="comment.html"><span>Contact</span></a></li>
             </ul>
         </nav>
-
         <nav class="nav nav--right">
             <ul>
                 <div class="cart-total">0</div>
@@ -147,41 +202,132 @@
     </header>
     <!-- //header -->
 
-    <main id="main">
-        <div class="container">
-            <section>
-                <div>
-                    <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span> <span>scroll</span>
-                        <span>section</span>
-                    </h1>
-                    <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">with GSAP ScrollTrigger & Locomotive
-                        Scroll</p>
-                </div>
+    <main id="section2">
+        <article id="inc03">
+            <div class="tit_area" data-aos="fade-right">
+                <p class="tit">used <span>stack</span></p>
+                <p class="txt">이런 기술들을 사용해보았습니다!</p>
+            </div>
 
-            </section>
+            <div class="img_slide_wrap">
+                <ul class="img_slide">
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                                alt="JavaScript">
+                            <div class="txt">
+                                <p>JavaScript</p>
+                                <div>인터랙티브 웹 페이지를 만들기 위해 사용합니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP">
+                            <div class="txt">
+                                <p>PHP</p>
+                                <div>서버 사이드 스크립팅 언어로, 동적인 웹 페이지를 생성하는데 사용됩니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
+                                alt="Sass">
+                            <div class="txt">
+                                <p>Sass</p>
+                                <div>CSS 전처리기로, 스타일시트의 유지보수를 쉽게 만듭니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                                alt="Tailwind CSS">
+                            <div class="txt">
+                                <p>Tailwind CSS</p>
+                                <div>유틸리티 퍼스트 CSS 프레임워크로, 신속한 UI 개발을 지원합니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/JQuery_Logo.svg/1200px-JQuery_Logo.svg.png"
+                                alt="jQuery">
+                            <div class="txt">
+                                <p>jQuery</p>
+                                <div>DOM 조작과 이벤트 처리를 쉽게 할 수 있게 도와줍니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+                            <div class="txt">
+                                <p>React</p>
+                                <div>사용자 인터페이스를 구축하기 위한 자바스크립트 라이브러리입니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
+                                alt="Next.js">
+                            <div class="txt">
+                                <p>Next.js</p>
+                                <div>React 기반의 프레임워크로, 서버 사이드 렌더링과 정적 사이트 생성을 지원합니다.</div>
+                            </div>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+                                alt="Node.js">
+                            <div class="txt">
+                                <p>Node.js</p>
+                                <div>서버 사이드 자바스크립트 실행 환경으로, 비동기 이벤트 기반으로 작동합니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://vitejs.dev/logo.svg" alt="Vite">
+                            <div class="txt">
+                                <p>Vite</p>
+                                <div>차세대 프론트엔드 도구로, 빠른 개발 환경을 제공합니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/1200px-MySQL_logo.svg.png"
+                                alt="MySQL">
+                            <div class="txt">
+                                <p>MySQL</p>
+                                <div>관계형 데이터베이스 관리 시스템으로, 데이터 저장과 관리를 담당합니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/MongoDB_Logo.svg"
+                                alt="MongoDB">
+                            <div class="txt">
+                                <p>MongoDB</p>
+                                <div>NoSQL 데이터베이스로, 유연한 스키마를 제공합니다.</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <section id="sectionPin">
-                <div class="pin-wrap">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.</h2>
-                    <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                        alt="">
-                    <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                        alt="">
-                    <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                        alt="">
-
-                </div>
-            </section>
-            <section><img
-                    src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt="">
-                <h2 data-scroll data-scroll-speed="1" class="credit"><a href="https://thisisadvantage.com"
-                        target="_blank">Made by Advantage</a></h2>
-            </section>
-        </div>
+            <div class="bg">
+                <p class="flow_txt">What I Can Do For You</p>
+                <p class="box"></p>
+            </div>
+        </article>
     </main>
-    <!-- //section1 -->
+    <!-- //section2 -->
 
     <footer id="footer">
         <span>Never Give Up</span>
@@ -201,58 +347,135 @@
         <span>Never Give Up</span>
         <span>Never Give Up</span>
         <span>Never Give Up</span>
-        <span>Never Give Up</span>
-        <span>Never Give Up</span>
-        <span>Never Give Up</span>
-        <span>Never Give Up</span>
-        <span>Never Give Up</span>
     </footer>
     <!-- //footer -->
+    <div class="container-animation"></div>
+    <div class="container-animation start">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/transition3.js"></script>
     <script>
-        // Initialize Locomotive Scroll
-        const locoScroll = new LocomotiveScroll({
-            el: document.querySelector("#main"),
-            smooth: true
-        });
-
-        // Update ScrollTrigger on Locomotive Scroll update
-        locoScroll.on("scroll", ScrollTrigger.update);
-
-        // Setup ScrollTrigger proxy for Locomotive Scroll
-        ScrollTrigger.scrollerProxy("#main", {
-            scrollTop(value) {
-                return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-            },
-            getBoundingClientRect() {
-                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-            },
-            pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-        });
-
-        // Horizontal scrolling for #sectionPin
-        gsap.to(".pin-wrap", {
-            xPercent: -100 * (document.querySelectorAll(".pin-wrap > *").length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#sectionPin",
-                scroller: "#main",
-                pin: true,
-                scrub: 1,
-                snap: 1 / (document.querySelectorAll(".pin-wrap > *").length - 1),
-                end: () => "+=" + document.querySelector("#sectionPin").offsetWidth
-            }
-        });
-
-        // Refresh ScrollTrigger and Locomotive Scroll
-        ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-        ScrollTrigger.refresh();
+        gsap.registerPlugin(ScrollTrigger);
+        const pinnedImageWrappers = document.querySelectorAll('#inc03');
+        if (pinnedImageWrappers) {
+            pinnedImageWrappers.forEach((wrapper) => {
+                const inner = wrapper.querySelector('#inc03 .img_slide');
+                gsap.to(inner, {
+                    x: () => -(inner.scrollWidth - document.documentElement.clientWidth) + 'px',
+                    ease: 'none',
+                    scrollTrigger: {
+                        start: 'top',
+                        trigger: wrapper,
+                        pin: true,
+                        scrub: 1,
+                        invalidateOnRefresh: true,
+                        end: () => `+=${inner.offsetWidth}`
+                    }
+                });
+            });
+        }
     </script>
 </body>
 

@@ -48,29 +48,59 @@ body {
     display: block;
 }
 
-#header nav {
-    border: 1px solid #ffacac93;
-    padding: 0.8rem 2.2rem;
-    border-radius: 100px;
-}
-
-#header nav ul {
-    display: flex;
-}
-
-#header nav li {
+.nav {
+    z-index: 10;
     color: #FFACAC;
+    position: absolute;
+    top: 2rem;
+    z-index: 10;
 }
 
-#header nav li a {
-    padding: 10px;
-    font-family: 'PP NeueBit';
-    opacity: 0.5;
-    text-transform: uppercase;
+.nav--right {
+    right: 1rem;
 }
 
-#header nav li.active a {
-    opacity: 1;
+.nav ul {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+}
+
+.nav li {
+    display: block;
+    margin: 0 1rem;
+    padding: 0;
+}
+
+.nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: calc(0.5rem + 0.35vw);
+    font-family: 'PP Supply Mono';
+}
+
+.nav a span {
+    position: relative;
+}
+
+.nav a span:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.35rem;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: transform 0.75s ease;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.nav a:hover span:before,
+.nav a.is-active span:before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 #main {
