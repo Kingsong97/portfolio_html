@@ -1,0 +1,130 @@
+#section2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: #111;
+    overflow: hidden;
+}
+
+#section2::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../img/noise.gif);
+    opacity: 0.051;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.card_wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    width: 20vw;
+    max-width: 250px;
+    height: 75vh;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    filter: grayscale(1) opacity(0.1) contrast(200%);
+    transition: 0.5s;
+    transform: skewY(-10deg);
+    z-index: 1;
+    position: relative;
+}
+
+.card.highlight {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.1);
+    box-shadow: 0 25px 50px black;
+    z-index: 100;
+}
+
+@media (orientation: portrait) {
+    .card_wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 75vw;
+        max-width: 75vw;
+        height: 20vh;
+        margin: 1rem 0;
+        background-size: 100% auto;
+        background-position: 50% 0%;
+        transform: skewX(-10deg);
+    }
+
+    .card:nth-child(1) {
+        background-position: 50% 10%;
+    }
+
+    .card:nth-child(3) {
+        background-position: 50% 20%;
+    }
+
+    .card:nth-child(4) {
+        background-position: 50% 10%;
+    }
+}
+
+.card.card-01 {
+    background-color: dodgerblue;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fd26e87c-5667-4cf9-9be9-e58887610efe/debwn8y-2983dd90-137f-4401-bde6-bad8b01a3b62.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZkMjZlODdjLTU2NjctNGNmOS05YmU5LWU1ODg4NzYxMGVmZVwvZGVid244eS0yOTgzZGQ5MC0xMzdmLTQ0MDEtYmRlNi1iYWQ4YjAxYTNiNjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.6_KZnTjuBOypvaaJ-g2h0SkJfLy9NYxUnnzxJGqWQxA");
+}
+
+.card.card-02 {
+    background-color: red;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea37168f-58bf-43ec-b98d-f15c62f681dd/deeo189-b22c4b6a-98dc-4b00-9d1d-abdd1c1cbe18.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VhMzcxNjhmLTU4YmYtNDNlYy1iOThkLWYxNWM2MmY2ODFkZFwvZGVlbzE4OS1iMjJjNGI2YS05OGRjLTRiMDAtOWQxZC1hYmRkMWMxY2JlMTgucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iuMiGBbrrjkoSuGldENnb59OIlgv479aka0KHseZrlw");
+}
+
+.card.card-03 {
+    background-color: purple;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea37168f-58bf-43ec-b98d-f15c62f681dd/deeo182-1eddcacc-48ce-46f4-97e4-5a3887af11d1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VhMzcxNjhmLTU4YmYtNDNlYy1iOThkLWYxNWM2MmY2ODFkZFwvZGVlbzE4Mi0xZWRkY2FjYy00OGNlLTQ2ZjQtOTdlNC01YTM4ODdhZjExZDEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.up2-M-e6MoppOZE7S9n9KnEqyyBrjNMw60tk8Fc0xMk");
+}
+
+.card.card-04 {
+    background-color: darkorange;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fd26e87c-5667-4cf9-9be9-e58887610efe/debwnip-9f4e2268-87bb-4b2c-81a2-ec18769a9f9c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZkMjZlODdjLTU2NjctNGNmOS05YmU5LWU1ODg4NzYxMGVmZVwvZGVid25pcC05ZjRlMjI2OC04N2JiLTRiMmMtODFhMi1lYzE4NzY5YTlmOWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Svm3i2b8zy-DCKOjfJfxXvX88eBLo4d4xB8MNlh7lXM");
+}
+
+
+.card.card-01::after,
+.card.card-02::after,
+.card.card-03::after,
+.card.card-04::after {
+    content: "NAME";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 3px 3px #555;
+}
+
+.card.card-01::after {
+    content: "LEO";
+}
+
+.card.card-02::after {
+    content: "RAPH";
+}
+
+.card.card-03::after {
+    content: "DON";
+}
+
+.card.card-04::after {
+    content: "MIKE";
+}
