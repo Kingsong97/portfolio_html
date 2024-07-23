@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/work5.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <span>DEVELOPER</span>
+            <span>PORTFOLIO</span>
+        </h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index2.html">001/Main</a></li>
+                <li class="active"><a href="work.html">002/Work</a></li>
+                <li><a href="team.html">003/Team</a></li>
+                <li><a href="comment.html">004/Comment</a></li>
+                <li><a href="contact.html">005/Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right"></div>
+    </header>
+    <!-- //header -->
+
+    <main id="section2">
+        <div class="section2-header"></div>
+        <div class="section2-content">
+            <ul class="section2-featured-slider" id="wheel">
+                <li class="active">
+                    <div class="section2-image">
+                        <div class="section2-details">
+                            <h1 class="section2-title">Lorem Ipsum</h1>
+                            <hr class="section2-small" />
+                            <h6 class="section2-roles">Videography / Editing</h6>
+                            <a href="#" class="section2-button">View Project</a>
+                        </div>
+                        <img src="https://unsplash.it/1200/900" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <div class="section2-image">
+                        <div class="section2-details">
+                            <h1 class="section2-title">Lorem Ipsum</h1>
+                            <hr class="section2-small" />
+                            <h6 class="section2-roles">Videography / Editing</h6>
+                            <a href="#" class="section2-button">View Project</a>
+                        </div>
+                        <img src="https://unsplash.it/1200/901" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <div class="section2-image">
+                        <div class="section2-details">
+                            <h1 class="section2-title">Lorem Ipsum</h1>
+                            <hr class="section2-small" />
+                            <h6 class="section2-roles">Videography / Editing</h6>
+                            <a href="#" class="section2-button">View Project</a>
+                        </div>
+                        <img src="https://unsplash.it/1200/902" alt="" />
+                    </div>
+                </li>
+                <li>
+                    <div class="section2-image">
+                        <div class="section2-details">
+                            <h1 class="section2-title">Lorem Ipsum</h1>
+                            <hr class="section2-small" />
+                            <h6 class="section2-roles">Videography / Editing</h6>
+                            <a href="#" class="section2-button">View Project</a>
+                        </div>
+                        <img src="https://unsplash.it/1200/903" alt="" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="section2-nav">
+            <a class="section2-prev">Prev</a>
+            <a class="section2-next">Next</a>
+        </nav>
+    </main>
+    <!-- //section2 -->
+
+    <footer id="footer">
+    </footer>
+    <!-- //footer -->
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/152635/ThrowPropsPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/utils/Draggable.min.js"></script>
+    <script>
+        var wheel = Draggable.create("#wheel", {
+            type: "rotation",
+            throwProps: true,
+            snap: function (endValue) {
+                return Math.round(endValue / 90) * 90;
+            },
+            onDrag: function () { },
+            onThrowComplete: function () {
+                dragActive()
+            }
+        });
+
+        TweenMax.set('#wheel li:not(.active) .section2-details > *', {
+            opacity: 0,
+            y: -10
+        })
+
+        function dragActive() {
+            var rot = wheel[0].rotation / 360
+            var decimal = rot % 1
+            var sliderLength = $('#wheel li').length
+            var tempIndex = Math.round(sliderLength * decimal)
+            var index
+
+            if (rot < 0) {
+                index = Math.abs(tempIndex)
+            } else {
+                index = sliderLength - tempIndex
+            }
+
+            if (decimal === 0) {
+                index = 0
+            }
+
+            TweenMax.staggerTo('#wheel li.active .section2-details > *', 0.6, {
+                opacity: 0,
+                y: -10
+            }, 0.1)
+
+            $('#wheel li.active').removeClass('active')
+            $($('#wheel li')[index]).addClass('active')
+
+            TweenMax.staggerTo('#wheel li.active .section2-details > *', 0.6, {
+                opacity: 1,
+                y: 0
+            }, 0.1)
+
+        }
+
+        function rotateDraggable(deg, callback) {
+            var rot = wheel[0].rotation
+            var tl = new TimelineMax()
+
+            tl.to('#wheel', .5, {
+                rotation: rot + deg,
+                onComplete: function () {
+                    callback()
+                }
+            });
+
+            wheel[0].rotation = rot + deg
+        }
+
+        function nextHandler() {
+            rotateDraggable(360 / $('#wheel li').length, dragActive);
+        }
+
+        function prevHandler() {
+            rotateDraggable(-360 / $('#wheel li').length, dragActive);
+        }
+
+        $('.section2-next').on('click', nextHandler);
+        $('.section2-prev').on('click', prevHandler);
+    </script>
+</body>
+
+</html>
