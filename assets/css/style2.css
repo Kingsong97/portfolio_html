@@ -167,6 +167,7 @@ body {
     align-items: center;
     z-index: 10;
 }
+
 .vert-text span {
     display: block;
     color: #fff;
@@ -195,6 +196,7 @@ body {
     right: 0;
     bottom: 0;
 }
+
 .slider__text {
     position: absolute;
     bottom: calc(2rem + 3vw);
@@ -207,15 +209,18 @@ body {
     color: #fff;
     font-weight: 500;
 }
+
 .slider__text-line {
     overflow: hidden;
     color: #ffacac;
     font-family: "scoreDream";
     font-weight: 200;
 }
+
 .slider__text-line.fw100 {
     font-weight: 100;
 }
+
 .slider__inner {
     position: absolute;
     left: 0;
@@ -223,6 +228,7 @@ body {
     right: 0;
     bottom: 0;
 }
+
 .slider__nav {
     position: absolute;
     top: 50%;
@@ -230,11 +236,13 @@ body {
     transform: translateY(-50%);
     z-index: 10;
 }
+
 .slider-bullet {
     display: flex;
     align-items: center;
     padding: 1rem 0;
 }
+
 .slider-bullet__text {
     color: #fff;
     font-size: 1rem;
@@ -242,11 +250,13 @@ body {
     font-family: "PP NeueBit";
     color: #ffacac;
 }
+
 .slider-bullet__line {
     background-color: #ffacac;
     height: 1px;
     width: 1rem;
 }
+
 .slider canvas {
     position: absolute;
     left: 0;
@@ -263,6 +273,7 @@ body {
     bottom: 0;
     overflow: hidden;
 }
+
 .slide__content {
     display: flex;
     align-items: center;
@@ -273,6 +284,7 @@ body {
     right: 0;
     bottom: 0;
 }
+
 .slide__img {
     position: relative;
     width: 25vw;
@@ -282,15 +294,19 @@ body {
     min-width: 12.5rem;
     transform-origin: top;
 }
+
 .slide__img img {
     filter: grayscale();
 }
+
 .slide__img:first-child {
     top: -1.5rem;
 }
+
 .slide__img:last-child {
     bottom: -1.5rem;
 }
+
 .slide__img img {
     display: block;
     position: absolute;

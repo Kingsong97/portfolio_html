@@ -8,7 +8,7 @@ body {
 #header {
     position: fixed;
     left: 0;
-    top: 10px;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,28 +42,28 @@ body {
     display: block;
 }
 
-#header nav {
+#header .mainNav {
     border: 1px solid #ffacac93;
     padding: 0.8rem 2.2rem;
     border-radius: 100px;
 }
 
-#header nav ul {
+#header .mainNav ul {
     display: flex;
 }
 
-#header nav li {
+#header .mainNav li {
     color: #ffacac;
 }
 
-#header nav li a {
+#header .mainNav li a {
     padding: 10px 20px;
     font-family: "PP NeueBit";
     opacity: 0.5;
     text-transform: uppercase;
 }
 
-#header nav li.active a {
+#header .mainNav li.active a {
     opacity: 1;
 }
 
@@ -96,11 +96,17 @@ body {
     top: 0;
     background-image: url(../img/noise.gif);
     opacity: 0.051;
-    z-index: 10;
+    z-index: 10000;
     pointer-events: none;
 }
 
-
+#section1 .top {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .menu {
     overflow: hidden;
@@ -240,7 +246,38 @@ body {
     }
 }
 
+#section1 .bom {
+    width: 100vw;
+    height: 40vh;
+}
 
+#section1 .bom .title {
+    text-align: center;
+}
+
+#section1 .bom .title span {
+    font-family: "PP NeueBit";
+    color: #ffacac;
+    font-size: 10vw;
+    padding: 0 20px;
+    text-transform: uppercase;
+    opacity: 0.3;
+}
+
+#section1 .bom .desc {
+    width: 70%;
+    color: #ffacac;
+    text-align: center;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    font-family: "maruBuri";
+    font-weight: 200;
+    font-size: 14px;
+}
+
+#section1 .bom .title span:nth-child(2) {
+    opacity: 1;
+}
 
 #footer {
     position: fixed;
@@ -253,6 +290,7 @@ body {
     color: #ffacac;
     white-space: nowrap;
     overflow: hidden;
+    z-index: 1000;
 }
 
 #footer span {
@@ -284,27 +322,4 @@ body {
     to {
         transform: translateX(-100%);
     }
-}
-
-.container-animation {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 20000;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: start;
-    justify-content: start;
-    pointer-events: none;
-}
-
-.container-animation.start span {
-    background-color: #ffacac;
-}
-
-.container-animation span {
-    width: 10%;
-    height: 10vh;
 }
