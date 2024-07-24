@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html class="no-js loader" lang="ko">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/work.css">
+    <style>
+
+    </style>
 </head>
 
-<body>
-    <header id="header">
-        <h1>
+<body class="loading">
+    <header id="header_section2">
+        <!-- <h1>
             <span>DEVELOPER</span>
             <span>PORTFOLIO</span>
-        </h1>
-        <nav class="nav">
+        </h1> -->
+        <nav class="nav_section2">
             <ul>
                 <li><a href="index2.html">001/Main</a></li>
                 <li class="active"><a href="work.html">002/Work</a></li>
@@ -26,85 +29,877 @@
                 <li><a href="contact.html">005/Contact</a></li>
             </ul>
         </nav>
-        <div class="right"></div>
+        <!-- <div class="right"></div> -->
     </header>
     <!-- //header -->
 
     <main id="section2">
-        <div class="card_wrap">
-            <div class="card card-01"></div>
-            <div class="card highlight card-02"></div>
-            <div class="card card-03"></div>
-            <div class="card card-04"></div>
+        <svg class="hidden">
+            <symbol id="icon-arrow" viewbox="0 0 24 24">
+                <title>arrow</title>
+                <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 ">
+                </polygon>
+            </symbol>
+            <symbol id="icon-drop" viewbox="0 0 24 24">
+                <title>drop</title>
+                <path
+                    d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z">
+                </path>
+                <path
+                    d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z">
+                </path>
+            </symbol>
+            <symbol id="icon-longarrow" viewbox="0 0 800 800">
+                <title>retour</title>
+                <polygon fill="orangered" fill-rule="nonzero" points="0 0 0 800 800 800"></polygon>
+            </symbol>
+            <symbol id="icon-navarrow" viewbox="0 0 400 400">
+                <title>navarrow</title>
+                <polygon fill="orangered" fill-rule="nonzero" points="400 0 0 400 400 400"></polygon>
+            </symbol>
+        </svg>
+        <div class="frame">
+            <header class="work_header">
+                <h1 class="work_header_title">Unveiling Creativity</h1>
+            </header>
+        </div>
+        <div class="slideshow">
+            <div class="slideshow__deco"></div>
+            <!--/1 CONJURER LA PEUR-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_14.jpg);background-position:26% top;">
+                    </div>
+                </div>
+                <div class="slide__side">A film of urgency, community, righteous anger, and grace
+                    (Andréa Picard)</div>
+                <div class="slide__title-wrap"><span class="slide__number">UN FILM SOUTENU PAR L'ACOR</span>
+                    <h3 class="slide__title acor--title">CONJURER LA PEUR </h3>
+                    <h4 class="slide__subtitle">par Raphaël Nieuwjaer <span>© ACOR, 2018</span></h4>
+                </div>
+            </div>
+            <!--/2 FICHE TECHNIQUE-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_06-b.jpg);background-position:36% bottom;">
+                    </div>
+                </div>
+                <div class="slide__side">Judy Hall is a name that will be on everyone’s lips (Maria Garcia)
+                </div>
+                <div class="slide__title-wrap"><span class="slide__number">FICHE TECHNIQUE</span>
+                    <h3 class="slide__title">Sortie nationale ▹ 05 décembre 2018</h3>
+                    <h4 class="slide__subtitle">Distributeur ▹ Shellac</h4>
+                </div>
+            </div>
+            <!--/3 SYNOPSIS-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_03.jpg);background-position:50% bottom;">
+                    </div>
+                </div>
+                <div class="slide__side">Un regard puissamment cinématographique et troublant de beauté
+                    (FIF La Roche/Yon)</div>
+                <div class="slide__title-wrap"><span class="slide__number">SYNOPSIS</span>
+                    <h3 class="slide__title">Un an après la mort d’Alton Sterling,</h3>
+                    <h4 class="slide__subtitle">une chronique de la communauté Afro-américaine de Baton Rouge en
+                        Louisiane, durant l’été 2017, quand une série de meurtres violents agite le pays.</h4>
+                </div>
+            </div>
+            <!--/ 4-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_17.jpg);background-position:59% 50%;">
+                    </div>
+                </div>
+                <div class="slide__side">Une œuvre intelligente, pudique et émouvante
+                    (Boustoune, anglesdevue.com)</div>
+                <div class="slide__title-wrap"><span class="slide__number">FESTIVALS, PRIX</span>
+                    <h3 class="slide__title"> </h3>
+                    <h4 class="slide__subtitle gold"> </h4>
+                </div>
+            </div>
+            <!--/5-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img bg--5"></div>
+                </div>
+                <div class="slide__side">Roberto Minervini’s Doc Poetically Explores Life in the Deep South
+                    (Indie Wire)</div>
+                <div class="slide__title-wrap"><span class="slide__number">FILM ANNONCE</span>
+                    <h3 class="slide__title"> </h3>
+                    <h4 class="slide__subtitle"> <span>© Shellac, 2018</span></h4>
+                </div>
+            </div>
+            <!--/6-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_23.jpg);background-position:47% top;">
+                    </div>
+                </div>
+                <div class="slide__side">Un magnifique portrait intime et collectif (Forum des images) </div>
+                <div class="slide__title-wrap"><span class="slide__number">DOSSIER DE PRESSE</span>
+                    <h3 class="slide__title"> </h3>
+                    <h4 class="slide__subtitle"> <span>© Shellac, 2018</span></h4>
+                </div>
+            </div>
+            <!--/7-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_01.jpg);background-position:47% top;">
+                    </div>
+                </div>
+                <div class="slide__side">Une œuvre qui abolit les frontières (Le Monde) </div>
+                <div class="slide__title-wrap"><span class="slide__number">TÉLÉCHARGEMENTS</span>
+                    <h3 class="slide__title"> </h3>
+                    <h4 class="slide__subtitle"> </h4>
+                </div>
+            </div>
+            <!--/8-->
+            <div class="slide">
+                <div class="slide__img-wrap">
+                    <div class="slide__img"
+                        style="background-image: url(https://www.lacor.info/film/what_you_gonna_do/img/what_you_gonna_do_11.jpg);background-position:29% 50%;">
+                    </div>
+                </div>
+                <div class="slide__side cit">You’re still young. They won’t shoot you. You still have time to
+                    fight.</div>
+                <div class="slide__title-wrap"><span class="slide__number">CONTACTS</span>
+                    <h3 class="slide__title"> </h3>
+                    <h4 class="slide__subtitle"> </h4>
+                </div>
+            </div>
+            <button class="work_nav nav--prev">
+                <svg class="icon icon--navarrow-prev">
+                    <use xlink:href="#icon-navarrow"></use>
+                </svg>
+            </button>
+            <button class="work_nav nav--next">
+                <svg class="icon icon--navarrow-next">
+                    <use xlink:href="#icon-navarrow"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="content">
+            <!--/1-->
+            <div class="content__item"><span class="content__number">UN FILM SOUTENU PAR L'ACOR</span>
+                <h3 class="content__title"> <br />CONJURER LA PEUR</h3>
+                <h4 class="content__subtitle gold">par Raphaël Nieujwar <span>© ACOR, 2018</span></h4>
+                <div class="content__text extrait"> <span>Avant d'être le produit de relations effectives, la
+                        communauté apparaît comme le fruit d'une réverbération affective. D'où le paradoxe du
+                        film : il noue les scènes à partir de ce qui divise, isole, empêche, et ce faisant
+                        laisse entrevoir autant la fragmentation sociale que les possibilités rédemptrices du
+                        partage et de l'alliance.</span><br /><br />
+                    <div class="link"> <a class="gold" href="https://cdpn.io/pen/debug/WYbWxX">Lire la
+                            suite…</a></div><br />
+                    <div class="link"> <a class="gold"
+                            href="https://www.lacor.info/film/what_you_gonna_do/texte_nieuwjaer/index.html">Biographie
+                            de Raphaël Nieuwjaer</a></div>
+                </div>
+                <div class="content__contact"></div>
+            </div>
+            <!--/2-->
+            <div class="content__item"><span class="content__number">FICHE TECHNIQUE</span><br /><br /><br />
+                <h3 class="content__title">Sortie nationale ▹ 05 décembre 2018</h3>
+                <h4 class="content__subtitle">Documentaire • N&B • USA / Italie / France • 2018 • 2H03 • Shellac
+                    • Visa 149799 • Avec Judy Hill, Dorothy Hill, Michael Nelson, Ronaldo King, Titus Turner,
+                    Ashlei King, Kevin Goodman, <em>The New Black Panther Party For Self Defense</em></h4>
+                <div class="content__text"><br /><br /><br /><br /><br /></div>
+                <div class="content__contact"><span class="right"></span></div>
+            </div>
+            <!--/3-->
+            <div class="content__item"><span class="content__number">SYNOPSIS </span>
+                <h3 class="content__title">Une réflexion sur la question raciale.</h3>
+                <h4 class="content__subtitle gold">Un portait intime de celles et ceux qui luttent pour la
+                    justice, la dignité et la survie dans un pays qui les maintient à la marge.</h4>
+                <div class="content__text">Été 2017. Plusieurs jeunes hommes afro-américains sont violemment
+                    abattus par la police, une série de meurtres qui répand une onde de choc dans tout le
+                    pays.<br /><br />Une communauté noire du Sud des États-Unis tente de vivre malgré les effets
+                    tenaces de l’histoire et de faire sa place dans un pays où elle n’en a pas.<br /><br />En
+                    parallèle, les <em>Black Panthers </em>préparent une grande manifestation contre les
+                    violences policières.<br /><br />Une réflexion foudroyante sur le racisme aux États-Unis,
+                    par le réalisateur de <em>The Other Side.</em></div>
+                <div class="content__contact"></div>
+            </div>
+            <!--/4-->
+            <div class="content__item"><span class="content__number">FESTIVALS, PRIX</span>
+                <h3 class="content__title"> </h3>
+                <h4 class="content__subtitle"> </h4>
+                <div class="content__text prix">75<sup>e</sup> MOSTRA de VENISE <br />compétition officielle
+                    <br /><span class="gold">Prix UNICEF</span><br /><br />BFI LONDON Film Festival
+                    2018<br /><span class="gold">Prix Best Documentary</span><br /><br />Festival
+                    d'AUCH <br /><br />9<sup>e</sup> FIF LA ROCHE-SUR-YON <br />compétition internationale
+                    <br /><span class="gold">Grand Prix du Jury international Ciné +</span>
+                </div>
+                <div class="content__contact"></div>
+            </div>
+            <!--/5-->
+            <div class="content__item"><span class="content__number">FILM ANNONCE</span>
+                <h3 class="content__title"> </h3>
+                <h4 class="content__subtitle"> </h4>
+                <div class="content__text fa">
+                    <object data="https://player.vimeo.com/video/289234634?color=ffffff&amp;title=0&amp;byline=0"
+                        webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen"
+                        allowfullscreen="allowfullscreen"></object>
+                </div>
+                <div class="content__contact"></div>
+            </div>
+            <!--/6-->
+            <div class="content__item"><span class="content__number">DOSSIER DE PRESSE</span>
+                <h3 class="content__title"> </h3>
+                <h4 class="content__subtitle"> </h4>
+                <div class="content__text dp">
+                    <object data="https://drive.google.com/file/d/1CUwFmrLn7nJBUgYrMrPhhbwmsSO0lHhW/preview"
+                        webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen"
+                        allowfullscreen="allowfullscreen"> </object>
+                </div>
+                <div class="content__contact"></div>
+            </div>
+            <!--/7    -->
+            <div class="content__item"><span class="content__number">TÉLÉCHARGEMENTS</span>
+                <h3 class="content__title"></h3>
+                <h4 class="content__subtitle"> </h4>
+                <div class="content__text phone tel">
+                    <object data="https://www.lacor.info/film/what_you_gonna_do/telechargements/"
+                        webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen"
+                        allowfullscreen="allowfullscreen"></object>
+                </div>
+                <div class="content__contact"></div>
+            </div>
+            <!--/8    -->
+            <div class="content__item"><span class="content__number">CONTACTS</span>
+                <h3 class="content__title"> </h3>
+                <h4 class="content__subtitle"> </h4>
+                <div class="content__text">ACOR<br /><a href="https://www.lacor.info" target="_new">Consulter le
+                        site</a><br /><span class="gold">soizig.le.devehat@lacor.info</span><br /><span>(33+) 2
+                        51 81 59 33</span><br /><br />INTERVENANT <br /><span class="gold">Raphaël
+                        Nieuwjaer</span><br />(cf. ACOR)<br /><br /><br />SHELLAC<br /><a
+                        href="https://www.shellac-altern.org/films/503" target="_new">Consulter le
+                        site</a><br />Nathalie Vabre (prog)<br /><span
+                        class="gold">nathalie@shellac-altern.org</span><br /><span>+33 4 95 04 96
+                        09</span><br /><br /><br /></div>
+                <div class="content__contact"><span class="left"></span></div>
+            </div>
+            <button class="content__close">
+                <svg class="icon icon--longarrow">
+                    <use xlink:href="#icon-longarrow"></use>
+                </svg>
+            </button>
         </div>
     </main>
     <!-- //section1 -->
 
-    <footer id="footer">
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-        <span>No SKIP</span>
-    </footer>
-    <!-- //footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var divs = document.querySelectorAll(".card");
-            divs.forEach(function (elm) {
-                elm.addEventListener("mouseenter", function () {
-                    var panel = document.querySelector(".highlight");
-                    panel.classList.toggle("highlight");
-                    elm.classList.toggle("highlight");
+        /// Alerte 
+        document.documentElement.className = "js";
+        var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+
+        /// charming
+        !function (e) { "undefined" == typeof module ? this.charming = e : module.exports = e }(function (e, n) { "use strict"; n = n || {}; var t = n.tagName || "span", o = null != n.classPrefix ? n.classPrefix : "char", r = 1, a = function (e) { for (var n = e.parentNode, a = e.nodeValue, c = a.length, l = -1; ++l < c;) { var d = document.createElement(t); o && (d.className = o + r, r++), d.appendChild(document.createTextNode(a[l])), n.insertBefore(d, e) } n.removeChild(e) }; return function c(e) { for (var n = [].slice.call(e.childNodes), t = n.length, o = -1; ++o < t;)c(n[o]); e.nodeType === Node.TEXT_NODE && a(e) }(e), e });
+
+        /**
+         * demo.js
+         * http://www.codrops.com
+         *
+         * Licensed under the MIT license.
+         * http://www.opensource.org/licenses/mit-license.php
+         * 
+         * Copyright 2018, Codrops
+         * http://www.codrops.com
+         */
+        {
+            // From http://www.quirksmode.org/js/events_properties.html#position
+            // Get the mouse position.
+            const getMousePos = (e) => {
+                let posx = 0;
+                let posy = 0;
+                if (!e) e = window.event;
+                if (e.pageX || e.pageY) {
+                    posx = e.pageX;
+                    posy = e.pageY;
+                }
+                else if (e.clientX || e.clientY) {
+                    posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                    posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                }
+                return { x: posx, y: posy }
+            };
+            // Gets a random integer.
+            const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+            // Equation of a line (y = mx + b ).
+            const lineEq = (y2, y1, x2, x1, currentVal) => {
+                const m = (y2 - y1) / (x2 - x1);
+                const b = y1 - m * x1;
+                return m * currentVal + b;
+            };
+
+            // Some random chars.
+            const chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '.', ':', ',', '^'];
+            const charsTotal = chars.length;
+
+            // Randomize letters function. Used when navigating the slideshow to switch the curretn slide´s texts.
+            const randomizeLetters = (letters) => {
+                return new Promise((resolve, reject) => {
+                    const lettersTotal = letters.length;
+                    let cnt = 0;
+
+                    letters.forEach((letter, pos) => {
+                        let loopTimeout;
+                        const loop = () => {
+                            letter.innerHTML = chars[getRandomInt(0, charsTotal - 1)];
+                            loopTimeout = setTimeout(loop, getRandomInt(50, 500));
+                        };
+                        loop();
+
+                        const timeout = setTimeout(() => {
+                            clearTimeout(loopTimeout);
+                            letter.style.opacity = 1;
+                            letter.innerHTML = letter.dataset.initial;
+                            ++cnt;
+                            if (cnt === lettersTotal) {
+                                resolve();
+                            }
+                        }, pos * lineEq(40, 0, 8, 200, lettersTotal));
+                    });
                 });
-            });
+            };
 
-            window.addEventListener("keyup", function (e) {
-                var panel = document.querySelector(".highlight");
-                if (
-                    (e.keyCode == 37 || e.keyCode == 38) &&
-                    panel != document.querySelectorAll(".card")[0]
-                ) {
-                    panel.previousElementSibling.classList.toggle("highlight");
-                    panel.classList.toggle("highlight");
+            // Hide each of the letters with random delays. Used when showing the current slide´s content.
+            const disassembleLetters = (letters) => {
+                return new Promise((resolve, reject) => {
+                    const lettersTotal = letters.length;
+                    let cnt = 0;
+
+                    letters.forEach((letter, pos) => {
+                        setTimeout(() => {
+                            letter.style.opacity = 0;
+                            ++cnt;
+                            if (cnt === lettersTotal) {
+                                resolve();
+                            }
+                        }, pos * 30);
+                    });
+                });
+            }
+
+            // The Slide class.
+            class Slide {
+                constructor(el) {
+                    this.DOM = { el: el };
+                    // The image wrap element.
+                    this.DOM.imgWrap = this.DOM.el.querySelector('.slide__img-wrap');
+                    // The image element.
+                    this.DOM.img = this.DOM.imgWrap.querySelector('.slide__img');
+                    // The texts: the parent wrap, title, number and side text.
+                    this.DOM.texts = {
+                        wrap: this.DOM.el.querySelector('.slide__title-wrap'),
+                        title: this.DOM.el.querySelector('.slide__title'),
+                        number: this.DOM.el.querySelector('.slide__number'),
+                        side: this.DOM.el.querySelector('.slide__side'),
+                    };
+                    // Split the title and side texts into spans, one per letter. Sort these so we can later animate then with the 
+                    // randomizeLetters or disassembleLetters functions when navigating and showing the content.
+                    charming(this.DOM.texts.title);
+                    charming(this.DOM.texts.side);
+                    this.DOM.titleLetters = Array.from(this.DOM.texts.title.querySelectorAll('span')).sort(() => 0.5 - Math.random());
+                    this.DOM.sideLetters = Array.from(this.DOM.texts.side.querySelectorAll('span')).sort(() => 0.5 - Math.random());
+                    this.DOM.titleLetters.forEach(letter => letter.dataset.initial = letter.innerHTML);
+                    this.DOM.sideLetters.forEach(letter => letter.dataset.initial = letter.innerHTML);
+                    // Calculate the sizes of the image wrap. 
+                    this.calcSizes();
+                    // And also the transforms needed per position. 
+                    // We have 5 different possible positions for a slide: center, bottom right, top left and outside the viewport (top left or bottom right).
+                    this.calcTransforms();
+                    // Init/Bind events.
+                    this.initEvents();
                 }
-                if (
-                    (e.keyCode == 39 || e.keyCode == 40) &&
-                    panel != document.querySelectorAll(".card")[3]
-                ) {
-                    panel.nextElementSibling.classList.toggle("highlight");
-                    panel.classList.toggle("highlight");
+                // Gets the size of the image wrap.
+                calcSizes() {
+                    this.width = this.DOM.imgWrap.offsetWidth;
+                    this.height = this.DOM.imgWrap.offsetHeight;
                 }
-            });
+                // Gets the transforms per slide position.
+                calcTransforms() {
+                    /*
+                    Each position corresponds to the position of a given slide:
+                    0: left top corner outside the viewport
+                    1: left top corner (prev slide position)
+                    2: center (current slide position)
+                    3: right bottom corner (next slide position)
+                    4: right bottom corner outside the viewport
+                    5: left side, for when the content is shown
+                    */
+                    this.transforms = [
+                        { x: -1 * (winsize.width / 2 + this.width), y: -1 * (winsize.height / 2 + this.height), rotation: -30 },
+                        { x: -1 * (winsize.width / 2 - this.width / 3), y: -1 * (winsize.height / 2 - this.height / 3), rotation: 0 },
+                        { x: 0, y: 0, rotation: 0 },
+                        { x: winsize.width / 2 - this.width / 3, y: winsize.height / 2 - this.height / 3, rotation: 0 },
+                        { x: winsize.width / 2 + this.width, y: winsize.height / 2 + this.height, rotation: 30 },
+                        { x: -1 * (winsize.width / 2 - this.width / 2 - winsize.width * 0.075), y: 0, rotation: 0 }
+                    ];
+                }
+                // Init events:
+                // Mouseevents for mousemove/tilt/scale on the current image, and window resize.
+                initEvents() {
+                    this.mouseenterFn = () => {
+                        if (!this.isPositionedCenter() || !allowTilt) return;
+                        clearTimeout(this.mousetime);
+                        this.mousetime = setTimeout(() => {
+                            // Scale the image.
+                            TweenMax.to(this.DOM.img, 0.8, {
+                                ease: Power3.easeOut,
+                                scale: 1.1
+                            });
+                        }, 40);
+                    };
+                    this.mousemoveFn = ev => requestAnimationFrame(() => {
+                        // Tilt the current slide.
+                        if (!allowTilt || !this.isPositionedCenter()) return;
+                        this.tilt(ev);
+                    });
+                    this.mouseleaveFn = (ev) => requestAnimationFrame(() => {
+                        if (!allowTilt || !this.isPositionedCenter()) return;
+                        clearTimeout(this.mousetime);
 
-            window.focus();
-        });
+                        // Reset tilt and image scale.
+                        TweenMax.to([this.DOM.imgWrap, this.DOM.texts.wrap], 1.8, {
+                            ease: 'Power4.easeOut',
+                            x: 0,
+                            y: 0,
+                            rotationX: 0,
+                            rotationY: 0
+                        });
+                        TweenMax.to(this.DOM.img, 1.8, {
+                            ease: 'Power4.easeOut',
+                            scale: 1
+                        });
+                    });
+                    // When resizing the window recalculate size and transforms, since both will depend on the window size.
+                    this.resizeFn = () => {
+                        this.calcSizes();
+                        this.calcTransforms();
+                    };
+                    this.DOM.imgWrap.addEventListener('mouseenter', this.mouseenterFn);
+                    this.DOM.imgWrap.addEventListener('mousemove', this.mousemoveFn);
+                    this.DOM.imgWrap.addEventListener('mouseleave', this.mouseleaveFn);
+                    window.addEventListener('resize', this.resizeFn);
+                }
+                // Tilt the image wrap and texts when mouse moving the current slide.
+                tilt(ev) {
+                    const mousepos = getMousePos(ev);
+                    // Document scrolls.
+                    const docScrolls = {
+                        left: document.body.scrollLeft + document.documentElement.scrollLeft,
+                        top: document.body.scrollTop + document.documentElement.scrollTop
+                    };
+                    const bounds = this.DOM.imgWrap.getBoundingClientRect();
+                    // Mouse position relative to the main element (this.DOM.el).
+                    const relmousepos = {
+                        x: mousepos.x - bounds.left - docScrolls.left,
+                        y: mousepos.y - bounds.top - docScrolls.top
+                    };
 
+                    // Move the element from -20 to 20 pixels in both x and y axis.
+                    // Rotate the element from -15 to 15 degrees in both x and y axis.
+                    let t = { x: [-20, 20], y: [-20, 20] },
+                        r = { x: [-15, 15], y: [-15, 15] };
+
+                    const transforms = {
+                        translation: {
+                            x: (t.x[1] - t.x[0]) / bounds.width * relmousepos.x + t.x[0],
+                            y: (t.y[1] - t.y[0]) / bounds.height * relmousepos.y + t.y[0]
+                        },
+                        rotation: {
+                            x: (r.x[1] - r.x[0]) / bounds.height * relmousepos.y + r.x[0],
+                            y: (r.y[1] - r.y[0]) / bounds.width * relmousepos.x + r.y[0]
+                        }
+                    };
+
+                    // Move the image wrap.
+                    TweenMax.to(this.DOM.imgWrap, 1.5, {
+                        ease: 'Power1.easeOut',
+                        x: transforms.translation.x,
+                        y: transforms.translation.y,
+                        rotationX: transforms.rotation.x,
+                        rotationY: transforms.rotation.y
+                    });
+
+                    // Move the texts wrap.
+                    TweenMax.to(this.DOM.texts.wrap, 1.5, {
+                        ease: 'Power1.easeOut',
+                        x: -1 * transforms.translation.x,
+                        y: -1 * transforms.translation.y
+                    });
+                }
+                // Positions one slide (left, right or current) in the viewport.
+                position(pos) {
+                    TweenMax.set(this.DOM.imgWrap, {
+                        x: this.transforms[pos].x,
+                        y: this.transforms[pos].y,
+                        rotationX: 0,
+                        rotationY: 0,
+                        opacity: 1,
+                        rotationZ: this.transforms[pos].rotation
+                    });
+                }
+                // Sets it as current.
+                setCurrent(isContentOpen) {
+                    this.isCurrent = true;
+                    this.DOM.el.classList.add('slide--current', 'slide--visible');
+                    // Position it on the current´s position.
+                    this.position(isContentOpen ? 5 : 2);
+                }
+                // Position the slide on the left side.
+                setLeft(isContentOpen) {
+                    this.isRight = this.isCurrent = false;
+                    this.isLeft = true;
+                    this.DOM.el.classList.add('slide--visible');
+                    // Position it on the left position.
+                    this.position(isContentOpen ? 0 : 1);
+                }
+                // Position the slide on the right side.
+                setRight(isContentOpen) {
+                    this.isLeft = this.isCurrent = false;
+                    this.isRight = true;
+                    this.DOM.el.classList.add('slide--visible');
+                    // Position it on the right position.
+                    this.position(isContentOpen ? 4 : 3);
+                }
+                // Check if the slide is positioned on the right side (if it´s the next slide in the slideshow).
+                isPositionedRight() {
+                    return this.isRight;
+                }
+                // Check if the slide is positioned on the left side (if it´s the previous slide in the slideshow).
+                isPositionedLeft() {
+                    return this.isLeft;
+                }
+                // Check if the slide is the current one.
+                isPositionedCenter() {
+                    return this.isCurrent;
+                }
+                // Reset classes and state.
+                reset() {
+                    this.isRight = this.isLeft = this.isCurrent = false;
+                    this.DOM.el.classList = 'slide';
+                }
+                hide() {
+                    TweenMax.set(this.DOM.imgWrap, { x: 0, y: 0, rotationX: 0, rotationY: 0, rotationZ: 0, opacity: 0 });
+                }
+                // Moves a slide to a specific position defined in settings.position.
+                // Also, moves it from position settings.from and if we need to reset the image scale when moving the slide then settings.resetImageScale should be true.
+                moveToPosition(settings) {
+                    return new Promise((resolve, reject) => {
+                        /*
+                        Moves the slide to a specific position:
+                        -2: left top corner outside the viewport
+                        -1: left top corner (prev slide position)
+                        0: center (current slide position)
+                        1: right bottom corner (next slide position)
+                        2: right bottom corner outside the viewport
+                        3: left side, for when the content is shown
+                        */
+                        TweenMax.to(this.DOM.imgWrap, .8, {
+                            ease: Power4.easeInOut,
+                            delay: settings.delay || 0,
+                            startAt: settings.from !== undefined ? {
+                                x: this.transforms[settings.from + 2].x,
+                                y: this.transforms[settings.from + 2].y,
+                                rotationX: 0,
+                                rotationY: 0,
+                                rotationZ: this.transforms[settings.from + 2].rotation
+                            } : {},
+                            x: this.transforms[settings.position + 2].x,
+                            y: this.transforms[settings.position + 2].y,
+                            rotationX: 0,
+                            rotationY: 0,
+                            rotationZ: this.transforms[settings.position + 2].rotation,
+                            onStart: settings.from !== undefined ? () => TweenMax.set(this.DOM.imgWrap, { opacity: 1 }) : null,
+                            onComplete: resolve
+                        });
+
+                        // Reset image scale when showing the content of the current slide.
+                        if (settings.resetImageScale) {
+                            TweenMax.to(this.DOM.img, .8, {
+                                ease: Power4.easeInOut,
+                                scale: 1
+                            });
+                        }
+                    });
+                }
+                // Hides the current slide´s texts.
+                hideTexts(animation = false) {
+                    if (animation) {
+                        disassembleLetters(this.DOM.titleLetters).then(() => TweenMax.set(this.DOM.texts.wrap, { opacity: 0 }));
+                        disassembleLetters(this.DOM.sideLetters).then(() => TweenMax.set(this.DOM.texts.side, { opacity: 0 }));
+                    }
+                    else {
+                        TweenMax.set(this.DOM.texts.wrap, { opacity: 0 });
+                        TweenMax.set(this.DOM.texts.side, { opacity: 0 });
+                    }
+                }
+                // Shows the current slide´s texts.
+                showTexts(animation = true) {
+                    TweenMax.set(this.DOM.texts.wrap, { opacity: 1 });
+                    TweenMax.set(this.DOM.texts.side, { opacity: 1 });
+
+                    if (animation) {
+                        randomizeLetters(this.DOM.titleLetters);
+                        randomizeLetters(this.DOM.sideLetters);
+                        TweenMax.to(this.DOM.texts.number, 0.6, {
+                            ease: Elastic.easeOut.config(1, 0.5),
+                            startAt: { x: '-50%', opacity: 0 },
+                            x: '0%',
+                            opacity: 1
+                        });
+                    }
+                }
+            }
+
+            // The Content class. Represents one content item per slide.
+            class Content {
+                constructor(el) {
+                    this.DOM = { el: el };
+                    this.DOM.number = this.DOM.el.querySelector('.content__number');
+                    this.DOM.title = this.DOM.el.querySelector('.content__title');
+                    this.DOM.subtitle = this.DOM.el.querySelector('.content__subtitle');
+                    this.DOM.text = this.DOM.el.querySelector('.content__text');
+                    this.DOM.contact = this.DOM.el.querySelector('.content__contact');
+                    this.DOM.backCtrl = this.DOM.el.parentNode.querySelector('.content__close');
+                    this.DOM.backCtrl.addEventListener('click', () => slideshow.hideContent());
+                }
+                show() {
+                    this.DOM.el.classList.add('content__item--current');
+
+                    TweenMax.staggerTo([this.DOM.backCtrl, this.DOM.number, this.DOM.title, this.DOM.subtitle, this.DOM.text, this.DOM.contact], 0.8, {
+                        ease: Power4.easeOut,
+                        delay: 0.4,
+                        opacity: 1,
+                        startAt: { y: 40 },
+                        y: 0
+                    }, 0.05);
+                }
+
+                hide() {
+                    this.DOM.el.classList.remove('content__item--current');
+
+                    TweenMax.staggerTo([this.DOM.backCtrl, this.DOM.number, this.DOM.title, this.DOM.subtitle, this.DOM.text, this.DOM.contact].reverse(), 0.3, {
+                        ease: Power3.easeIn,
+                        opacity: 0,
+                        y: 10
+                    }, 0.01);
+                }
+            }
+
+            // The Slideshow class.
+            class Slideshow {
+                constructor(el) {
+                    this.DOM = { el: el };
+                    // The slides.
+                    this.slides = [];
+                    Array.from(this.DOM.el.querySelectorAll('.slide')).forEach(slideEl => this.slides.push(new Slide(slideEl)));
+                    // The total number of slides.
+                    this.slidesTotal = this.slides.length;
+                    // At least 4 slides to continue...
+                    if (this.slidesTotal < 8) {
+                        return false;
+                    }
+                    // Current slide position.
+                    this.current = 0;
+                    this.DOM.deco = this.DOM.el.querySelector('.slideshow__deco');
+
+                    this.contents = [];
+                    Array.from(document.querySelectorAll('.content > .content__item')).forEach(contentEl => this.contents.push(new Content(contentEl)));
+
+                    // Set the current/next/previous slides. 
+                    this.render();
+                    this.currentSlide.showTexts(false);
+                    // Init/Bind events.
+                    this.initEvents();
+                }
+                render() {
+                    // The current, next, and previous slides.
+                    this.currentSlide = this.slides[this.current];
+                    this.nextSlide = this.slides[this.current + 1 <= this.slidesTotal - 1 ? this.current + 1 : 0];
+                    this.prevSlide = this.slides[this.current - 1 >= 0 ? this.current - 1 : this.slidesTotal - 1];
+                    this.currentSlide.setCurrent();
+                    this.nextSlide.setRight();
+                    this.prevSlide.setLeft();
+                }
+                initEvents() {
+                    // Clicking the next and previous slide starts the navigation / clicking the current shows its content..
+                    this.clickFn = (slide) => {
+                        if (slide.isPositionedRight()) {
+                            this.navigate('next');
+                        }
+                        else if (slide.isPositionedLeft()) {
+                            this.navigate('prev');
+                        }
+                        else {
+                            this.showContent();
+                        }
+                    };
+                    for (let slide of this.slides) {
+                        slide.DOM.imgWrap.addEventListener('click', () => this.clickFn(slide));
+                    }
+
+                    this.resizeFn = () => {
+                        // Reposition the slides.
+                        this.nextSlide.setRight(this.isContentOpen);
+                        this.prevSlide.setLeft(this.isContentOpen);
+                        this.currentSlide.setCurrent(this.isContentOpen);
+
+                        if (this.isContentOpen) {
+                            TweenMax.set(this.DOM.deco, {
+                                scaleX: winsize.width / this.DOM.deco.offsetWidth,
+                                scaleY: winsize.height / this.DOM.deco.offsetHeight,
+                                x: -20,
+                                y: 20
+                            });
+                        }
+                    };
+                    window.addEventListener('resize', this.resizeFn);
+                }
+                showContent() {
+                    if (this.isContentOpen || this.isAnimating) return;
+                    allowTilt = false;
+                    this.isContentOpen = true;
+                    this.DOM.el.classList.add('slideshow--previewopen');
+                    TweenMax.to(this.DOM.deco, .8, {
+                        ease: Power4.easeInOut,
+                        scaleX: winsize.width / this.DOM.deco.offsetWidth,
+                        scaleY: winsize.height / this.DOM.deco.offsetHeight,
+                        x: -20,
+                        y: 20
+                    });
+                    // Move away right/left slides.
+                    this.prevSlide.moveToPosition({ position: -2 });
+                    this.nextSlide.moveToPosition({ position: 2 });
+                    // Position the current slide and reset its image scale value.
+                    this.currentSlide.moveToPosition({ position: 3, resetImageScale: true });
+                    // Show content and back arrow (to close the content).
+                    this.contents[this.current].show();
+                    // Hide texts.
+                    this.currentSlide.hideTexts(true);
+                }
+                hideContent() {
+                    if (!this.isContentOpen || this.isAnimating) return;
+
+                    this.DOM.el.classList.remove('slideshow--previewopen');
+
+                    // Hide content.
+                    this.contents[this.current].hide();
+
+                    TweenMax.to(this.DOM.deco, .8, {
+                        ease: Power4.easeInOut,
+                        scaleX: 1,
+                        scaleY: 1,
+                        x: 0,
+                        y: 0
+                    });
+                    // Move in right/left slides.
+                    this.prevSlide.moveToPosition({ position: -1 });
+                    this.nextSlide.moveToPosition({ position: 1 });
+                    // Position the current slide.
+                    this.currentSlide.moveToPosition({ position: 0 }).then(() => {
+                        allowTilt = true;
+                        this.isContentOpen = false;
+                    });
+                    // Show texts.
+                    this.currentSlide.showTexts();
+                }
+                // Animates the element behind the current slide.
+                bounceDeco(direction, delay) {
+                    TweenMax.to(this.DOM.deco, .4, {
+                        ease: 'Power2.easeIn',
+                        delay: delay + delay * 0.2,
+                        x: direction === 'next' ? -40 : 40,
+                        y: direction === 'next' ? -40 : 40,
+                        onComplete: () => {
+                            TweenMax.to(this.DOM.deco, 0.6, {
+                                //ease: Elastic.easeOut.config(1, 0.65),
+                                ease: 'Power2.easeOut',
+                                x: 0,
+                                y: 0
+                            });
+                        }
+                    });
+                }
+                // Navigate the slideshow.
+                navigate(direction) {
+                    // If animating return.
+                    if (this.isAnimating) return;
+                    this.isAnimating = true;
+                    allowTilt = false;
+
+                    const upcomingPos = direction === 'next' ?
+                        this.current < this.slidesTotal - 2 ? this.current + 2 : Math.abs(this.slidesTotal - 2 - this.current) :
+                        this.current >= 2 ? this.current - 2 : Math.abs(this.slidesTotal - 2 + this.current);
+
+                    this.upcomingSlide = this.slides[upcomingPos];
+
+                    // Update current.
+                    this.current = direction === 'next' ?
+                        this.current < this.slidesTotal - 1 ? this.current + 1 : 0 :
+                        this.current > 0 ? this.current - 1 : this.slidesTotal - 1;
+
+                    // Move slides (the previous, current, next and upcoming slide).
+                    this.prevSlide.moveToPosition({ position: direction === 'next' ? -2 : 0, delay: direction === 'next' ? 0 : 0.14 }).then(() => {
+                        if (direction === 'next') {
+                            this.prevSlide.hide();
+                        }
+                    });
+
+                    this.currentSlide.moveToPosition({ position: direction === 'next' ? -1 : 1, delay: 0.07 });
+                    this.currentSlide.hideTexts();
+
+                    this.bounceDeco(direction, 0.07);
+
+                    this.nextSlide.moveToPosition({ position: direction === 'next' ? 0 : 2, delay: direction === 'next' ? 0.14 : 0 }).then(() => {
+                        if (direction === 'prev') {
+                            this.nextSlide.hide();
+                        }
+                    });
+
+                    if (direction === 'next') {
+                        this.nextSlide.showTexts();
+                    }
+                    else {
+                        this.prevSlide.showTexts();
+                    }
+
+                    this.upcomingSlide.moveToPosition({ position: direction === 'next' ? 1 : -1, from: direction === 'next' ? 2 : -2, delay: 0.21 }).then(() => {
+                        // Reset classes.
+                        [this.nextSlide, this.currentSlide, this.prevSlide].forEach(slide => slide.reset());
+                        this.render();
+                        allowTilt = true;
+                        this.isAnimating = false;
+                    });
+                }
+            }
+
+            // Window sizes.
+            let winsize;
+            const calcWinsize = () => winsize = { width: window.innerWidth, height: window.innerHeight };
+            calcWinsize();
+            window.addEventListener('resize', calcWinsize);
+
+            let allowTilt = true;
+
+            // Init slideshow.
+            const slideshow = new Slideshow(document.querySelector('.slideshow'));
+
+            // Preload all the images in the page..
+            const loader = document.querySelector('.loader');
+            imagesLoaded(document.querySelectorAll('.slide__img'), { background: true }, () => document.body.classList.remove('loading'));
+        }
     </script>
 </body>
 
