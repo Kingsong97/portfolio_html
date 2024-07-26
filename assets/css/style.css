@@ -159,7 +159,7 @@ body {
     }
 }
 
-.slider {
+/* .slider {
     position: absolute;
     left: 0;
     top: 0;
@@ -286,4 +286,4 @@ body {
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-}
+} */
