@@ -46,8 +46,7 @@
     font-weight: 500;
     font-style: normal;
     src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
-    src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix")
-            format("embedded-opentype"),
+    src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix") format("embedded-opentype"),
         url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2") format("woff2"),
         url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff") format("woff"),
         url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf") format("truetype");
@@ -122,9 +121,6 @@ table,
 textarea {
     font-size: 16px;
     line-height: 1.4;
-    color: #202020;
-    font-family: NexonLv1GothicLow, -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica,
-        "Apple SD Gothic Neo", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -326,4 +322,20 @@ select {
 
 .pt200 {
     padding-top: 200px;
+}
+
+
+input::placeholder {
+    color: #ffacac;
+    font-family: "scoreDream";
+}
+
+input::-webkit-input-placeholder {
+    color: #ffacac;
+    font-family: "scoreDream";
+}
+
+input:-ms-input-placeholder {
+    color: #ffacac;
+    font-family: "scoreDream";
 }

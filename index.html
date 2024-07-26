@@ -1,305 +1,176 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
 
-        <link rel="stylesheet" href="assets/css/reset.css" />
-        <link rel="stylesheet" href="assets/css/style.css" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-    <body>
-        <header id="header">
-            <h1>
-                <span>DEVELOPER</span>
-                <span>PORTFOLIO</span>
-            </h1>
-            <nav class="mainNav">
-                <ul>
-                    <li class="active"><a href="main.html">001/Main</a></li>
-                    <li><a href="work.html">002/Work</a></li>
-                    <li><a href="team.html">003/Team</a></li>
-                    <li><a href="comment.html">004/Comment</a></li>
-                    <li><a href="contact.html">005/Contact</a></li>
-                </ul>
-            </nav>
-            <div class="right"></div>
-        </header>
-        <!-- //header -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-        <main id="section1">
-            <div class="top">
-                <div class="menu">
-                    <div class="menu--wrapper">
-                        <div class="menu--item">
-                            <figure>
-                                <img
-                                    src="https://images.unsplash.com/photo-1595265677860-9a3168007dc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
+<body>
+    <header id="header">
+        <h1>
+            <span>DEVELOPER</span>
+            <span>PORTFOLIO</span>
+        </h1>
+        <nav class="mainNav">
+            <ul>
+                <li class="active"><a href="main.html">001/about</a></li>
+                <li><a href="work.html">002/Work</a></li>
+                <li><a href="comment.html">003/Comment</a></li>
+                <li><a href="contact.html">004/Contact</a></li>
+            </ul>
+        </nav>
+        <div class="right" id="right"></div>
+    </header>
+    <!-- //header -->
 
-                        <div class="menu--item">
-                            <figure>
-                                <img
-                                    src="https://images.unsplash.com/photo-1594786118579-95ba90c801ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
+    <main id="section1">
+        <div class="slider js-slider">
+            <div class="slider__inner js-slider__inner"></div>
 
-                        <div class="menu--item">
-                            <figure>
-                                <img
-                                    src="https://images.unsplash.com/photo-1509339022327-1e1e25360a41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
+            <div class="slide js-slide">
+                <div class="slide__content">
+                    <figure class="slide__img js-slide__img">
+                        <img src="./assets/img/a-min.jpeg" />
+                    </figure>
+                    <figure class="slide__img js-slide__img">
+                        <img src="./assets/img/e-min.jpg" />
+                    </figure>
+                </div>
 
-                        <div class="menu--item">
-                            <figure>
-                                <img
-                                    src="https://images.unsplash.com/photo-1525417071002-5ee4e6bb44f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
-
-                        <div class="menu--item">
-                            <figure>
-                                <img
-                                    src="https://images.unsplash.com/photo-1594072702031-f0e2a602dd2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
-
-                        <div class="menu--item">
-                            <figure>
-                                <img
-                                    src="https://images.unsplash.com/photo-1592989819277-a3aafa40c66a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-                                    alt=""
-                                />
-                            </figure>
-                        </div>
+                <div class="slider__text js-slider__text">
+                    <div class="slider__text-line fw100 js-slider__text-line">
+                        <div>I enjoy</div>
+                    </div>
+                    <div class="slider__text-line fw100 js-slider__text-line">
+                        <div>and love coding.</div>
+                    </div>
+                    <div class="slider__text-line js-slider__text-line">
+                        <div>코딩을</div>
+                    </div>
+                    <div class="slider__text-line js-slider__text-line">
+                        <div>즐기고 좋아합니다.</div>
                     </div>
                 </div>
             </div>
-            <div class="bom">
-                <div class="title">
-                    <span>work</span>
-                    <span>portfolio</span>
-                    <span>about</span>
+
+            <div class="slide js-slide">
+                <div class="slide__content">
+                    <figure class="slide__img js-slide__img">
+                        <img src="./assets/img/d-min.jpg" />
+                    </figure>
+                    <figure class="slide__img js-slide__img">
+                        <img src="./assets/img/c-min.jpg" />
+                    </figure>
                 </div>
-                <div class="desc">
-                    아직 부족한 부분이 많다 생각하여 스터디 모임에 참여했습니다.<br />
-                    하루 8시간씩 공부하며 나머지 3개의 사이트와 메인 포트폴리오를 제작했습니다.<br />
-                    저처럼 추가적으로 포트폴리오를 만들고 공부를 하기 위한<br />
-                    취업하신 참여하신 분들도 계셨습니다.
+
+                <div class="slider__text js-slider__text">
+                    <div class="slider__text-line fw100 js-slider__text-line">
+                        <div>I enjoy</div>
+                    </div>
+                    <div class="slider__text-line fw100 js-slider__text-line">
+                        <div>working with people.</div>
+                    </div>
+                    <div class="slider__text-line js-slider__text-line">
+                        <div>사람들과 어울리며</div>
+                    </div>
+                    <div class="slider__text-line js-slider__text-line">
+                        <div>일하는 것을 좋아합니다.</div>
+                    </div>
                 </div>
             </div>
-        </main>
-        <!-- //section1 -->
 
-        <footer id="footer">
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-            <span>No SKIP</span>
-        </footer>
-        <!-- //footer -->
+            <div class="slide js-slide">
+                <div class="slide__content">
+                    <figure class="slide__img js-slide__img">
+                        <img src="./assets/img/b-min.jpg" />
+                    </figure>
+                    <figure class="slide__img js-slide__img">
+                        <img src="./assets/img/f-min.jpg" />
+                    </figure>
+                </div>
+                <div class="slider__text js-slider__text">
+                    <div class="slider__text-line fw100 js-slider__text-line">
+                        <div>I enjoy</div>
+                    </div>
+                    <div class="slider__text-line fw100 js-slider__text-line">
+                        <div>being responsible.</div>
+                    </div>
+                    <div class="slider__text-line js-slider__text-line">
+                        <div>책임감 있게</div>
+                    </div>
+                    <div class="slider__text-line js-slider__text-line">
+                        <div>성실히 일하는 것을 즐깁니다.</div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="container-animation"></div>
+            <nav class="slider__nav js-slider__nav">
+                <div class="slider-bullet js-slider-bullet">
+                    <span class="slider-bullet__text js-slider-bullet__text">01</span>
+                    <span class="slider-bullet__line js-slider-bullet__line"></span>
+                </div>
+                <div class="slider-bullet js-slider-bullet">
+                    <span class="slider-bullet__text js-slider-bullet__text">02</span>
+                    <span class="slider-bullet__line js-slider-bullet__line"></span>
+                </div>
+                <div class="slider-bullet js-slider-bullet">
+                    <span class="slider-bullet__text js-slider-bullet__text">03</span>
+                    <span class="slider-bullet__line js-slider-bullet__line"></span>
+                </div>
+            </nav>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-        <script src="https://unpkg.com/split-type"></script>
-        <script>
-            const targets = gsap.utils.toArray(".split");
+            <div class="scroll js-scroll">Scroll</div>
+        </div>
+    </main>
+    <!-- //section1 -->
 
-            targets.forEach((target) => {
-                let SplitClient = new SplitType(target, {
-                    type: "lines, words, chars",
-                });
-                let lines = SplitClient.lines;
-                let words = SplitClient.words;
-                let chars = SplitClient.chars;
-            });
 
-            document.querySelectorAll(".nav a").forEach((link) => {
-                link.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    const url = link.getAttribute("href");
+    <footer id="footer">
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+        <span>No SKIP</span>
+    </footer>
+    <!-- //footer -->
 
-                    gsap.to(".container-animation span", {
-                        stagger: { amount: 0.8, from: "random" },
-                        backgroundColor: "#ffacac",
-                        duration: 3,
-                    });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/colors.js"></script>
+    <script>
 
-                    setTimeout(() => {
-                        window.location.href = url;
-                    }, 5000);
-                });
-            });
+    </script>
+</body>
 
-            const container = document.querySelector(".container-animation");
-
-            // span 요소를 추가하는 함수
-            function addSpans() {
-                for (let i = 0; i < 100; i++) {
-                    const span = document.createElement("span");
-                    container.appendChild(span);
-                }
-            }
-            addSpans();
-        </script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
-        <script>
-            /*--------------------
-Vars
---------------------*/
-            const $menu = document.querySelector(".menu");
-            const $items = document.querySelectorAll(".menu--item");
-            const $images = document.querySelectorAll(".menu--item img");
-            let menuWidth = $menu.clientWidth;
-            let itemWidth = $items[0].clientWidth;
-            let wrapWidth = $items.length * itemWidth;
-
-            let scrollSpeed = 0;
-            let oldScrollY = 0;
-            let scrollY = 0;
-            let y = 0;
-
-            /*--------------------
-        Lerp
-        --------------------*/
-            const lerp = (v0, v1, t) => {
-                return v0 * (1 - t) + v1 * t;
-            };
-
-            /*--------------------
-        Dispose
-        --------------------*/
-            const dispose = (scroll) => {
-                gsap.set($items, {
-                    x: (i) => {
-                        return i * itemWidth + scroll;
-                    },
-                    modifiers: {
-                        x: (x, target) => {
-                            const s = gsap.utils.wrap(-itemWidth, wrapWidth - itemWidth, parseInt(x));
-                            return `${s}px`;
-                        },
-                    },
-                });
-            };
-            dispose(0);
-
-            /*--------------------
-        Wheel
-        --------------------*/
-            const handleMouseWheel = (e) => {
-                scrollY -= e.deltaY * 0.9;
-            };
-
-            /*--------------------
-        Touch
-        --------------------*/
-            let touchStart = 0;
-            let touchX = 0;
-            let isDragging = false;
-            const handleTouchStart = (e) => {
-                touchStart = e.clientX || e.touches[0].clientX;
-                isDragging = true;
-                $menu.classList.add("is-dragging");
-            };
-            const handleTouchMove = (e) => {
-                if (!isDragging) return;
-                touchX = e.clientX || e.touches[0].clientX;
-                scrollY += (touchX - touchStart) * 2.5;
-                touchStart = touchX;
-            };
-            const handleTouchEnd = () => {
-                isDragging = false;
-                $menu.classList.remove("is-dragging");
-            };
-
-            /*--------------------
-        Listeners
-        --------------------*/
-            $menu.addEventListener("mousewheel", handleMouseWheel);
-
-            $menu.addEventListener("touchstart", handleTouchStart);
-            $menu.addEventListener("touchmove", handleTouchMove);
-            $menu.addEventListener("touchend", handleTouchEnd);
-
-            $menu.addEventListener("mousedown", handleTouchStart);
-            $menu.addEventListener("mousemove", handleTouchMove);
-            $menu.addEventListener("mouseleave", handleTouchEnd);
-            $menu.addEventListener("mouseup", handleTouchEnd);
-
-            $menu.addEventListener("selectstart", () => {
-                return false;
-            });
-
-            /*--------------------
-        Resize
-        --------------------*/
-            window.addEventListener("resize", () => {
-                menuWidth = $menu.clientWidth;
-                itemWidth = $items[0].clientWidth;
-                wrapWidth = $items.length * itemWidth;
-            });
-
-            /*--------------------
-        Render
-        --------------------*/
-            const render = () => {
-                requestAnimationFrame(render);
-                y = lerp(y, scrollY, 0.1);
-                dispose(y);
-
-                scrollSpeed = y - oldScrollY;
-                oldScrollY = y;
-
-                gsap.to($items, {
-                    skewX: -scrollSpeed * 0.2,
-                    rotate: scrollSpeed * 0.01,
-                    scale: 1 - Math.min(100, Math.abs(scrollSpeed)) * 0.003,
-                });
-            };
-            render();
-        </script>
-    </body>
 </html>
