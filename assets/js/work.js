@@ -222,12 +222,12 @@ supportsCssVars() || alert("Please view this demo in a modern browser that suppo
                     });
                 }, 40);
             };
-            this.mousemoveFn = (ev) =>
-                requestAnimationFrame(() => {
-                    // Tilt the current slide.
-                    if (!allowTilt || !this.isPositionedCenter()) return;
-                    this.tilt(ev);
-                });
+            // this.mousemoveFn = (ev) =>
+            //     requestAnimationFrame(() => {
+            //         // Tilt the current slide.
+            //         if (!allowTilt || !this.isPositionedCenter()) return;
+            //         this.tilt(ev);
+            //     });
             this.mouseleaveFn = (ev) =>
                 requestAnimationFrame(() => {
                     if (!allowTilt || !this.isPositionedCenter()) return;

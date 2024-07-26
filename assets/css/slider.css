@@ -15,6 +15,12 @@
 }
 
 /* Page Loader */
+#section2 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .cit {
     color: #cca700 !important;
