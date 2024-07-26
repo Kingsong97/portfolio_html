@@ -22,9 +22,21 @@
     background-size: cover;
 }
 
+#section2::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../img/noise.gif);
+    opacity: 0.051;
+    z-index: 100;
+    pointer-events: none;
+}
+
 .cit {
-    color: #cca700 !important;
-    font-style: italic;
+    color: #ffacaf !important;
 }
 
 .cit:before {
@@ -36,11 +48,11 @@
 }
 
 .orangered {
-    color: #ff4500;
+    color: #ffacaf;
 }
 
 .gold {
-    color: #cca700;
+    color: #ffacaf;
 }
 
 .hidden {
@@ -331,14 +343,14 @@
 
 .content__number {
     font-weight: normal;
-    color: #fff;
+    color: #ffacaf;
 }
 
 .content__number::before {
     content: "☆";
     display: inline-block;
     margin: 0 1em 0 0;
-    color: #ff4500;
+    color: #ffacaf;
 }
 
 .content__title {
@@ -450,7 +462,6 @@
 
 .extrait {
     margin-top: 25px;
-    font-style: italic;
     font-weight: normal;
     -moz-column-count: 1;
     column-count: 1;
@@ -464,13 +475,13 @@
 }
 
 .extrait span:before {
-    color: #cca700;
+    color: #ffacaf;
     content: "« ";
     font-weight: bold;
 }
 
 .extrait span:after {
-    color: #cca700;
+    color: #ffacaf;
     content: " »";
     font-weight: bold;
 }
@@ -690,7 +701,6 @@
 
     .extrait {
         margin-top: -50px;
-        font-style: italic;
         font-weight: normal;
         -moz-column-count: 1;
         column-count: 1;
@@ -700,7 +710,7 @@
         max-width: 600px;
         text-align: justify;
         line-height: 1.5;
-        color: #fff;
+        color: #ffacaf;
     }
 
     .fa object {
