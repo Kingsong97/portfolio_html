@@ -5,50 +5,6 @@ body {
     background: #111;
 }
 
-/* 기본 테마 */
-body.default-theme {
-    background: #111;
-}
-
-body.default-theme #header h1 {
-    color: #ffacac;
-}
-
-body.default-theme #header .mainNav {
-    border-color: #ffacac93;
-}
-
-body.default-theme #header .mainNav li {
-    color: #ffacac;
-}
-
-body.default-theme #header .right {
-    border-color: #ffacac93;
-    background-image: url('../img/svg/eye.svg');
-}
-
-/* 대체 테마 */
-.alternate-theme {
-    color: #00ffac;
-}
-
-body.alternate-theme #header h1 {
-    color: #00ffac;
-}
-
-body.alternate-theme #header .mainNav {
-    border-color: #00ffac93;
-}
-
-body.alternate-theme #header .mainNav li {
-    color: #00ffac;
-}
-
-body.alternate-theme #header .right {
-    border-color: #00ffac93;
-    background-image: url('../img/svg/alternate-eye.svg');
-}
-
 
 #header {
     position: fixed;
@@ -116,7 +72,6 @@ body.alternate-theme #header .right {
     border: 1px solid #ffacac93;
     width: 40px;
     height: 40px;
-    background-image: url(../img/svg/eye.svg);
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -156,7 +111,6 @@ body.alternate-theme #header .right {
     align-items: center;
     justify-content: center;
 }
-
 
 #footer {
     position: fixed;

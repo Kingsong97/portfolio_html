@@ -1,0 +1,202 @@
+/* 기본 테마 */
+body.default-theme {
+    background: #111;
+}
+
+body.default-theme #header h1 {
+    color: #ffacac;
+}
+
+body.default-theme #header .mainNav {
+    border-color: #ffacac93;
+}
+
+body.default-theme #header .mainNav li {
+    color: #ffacac;
+}
+
+body.default-theme #header .right {
+    border-color: #ffacac93;
+    background-image: url('../img/svg/eye.svg');
+}
+
+body.default-theme #header h1::before {
+    background-image: url(../img/svg/star2.svg);
+}
+
+body.default-theme #footer {
+    border-top: 1px solid #ffacac31;
+}
+
+body.default-theme #footer span::after {
+    background-image: url(../img/svg/star.svg);
+}
+
+body.default-theme .slider-bullet__line {
+    background-color: #ffacac;
+}
+
+body.default-theme .slider__text-line div,
+body.default-theme .slider-bullet__text,
+body.default-theme .slider-bullet__line,
+body.default-theme .scroll,
+body.default-theme #footer span {
+    color: #ffacac;
+    border-color: #ffacac;
+}
+
+/* 대체 테마 */
+body.alternate-theme {
+    background: #111;
+}
+
+body.alternate-theme #header h1 {
+    color: #00ffac;
+}
+
+body.alternate-theme #header .mainNav {
+    border-color: #00ffac93;
+}
+
+body.alternate-theme #header .mainNav li {
+    color: #00ffac;
+}
+
+body.alternate-theme #header .right {
+    border-color: #00ffac93;
+    background-image: url('../img/svg/eye_green.svg');
+}
+
+body.alternate-theme #header h1::before {
+    background-image: url(../img/svg/star2_green.svg);
+}
+
+body.alternate-theme #footer {
+    border-top: 1px solid #00ffac31;
+}
+
+body.alternate-theme #footer span::after {
+    background-image: url(../img/svg/star_green.svg);
+}
+
+body.alternate-theme .slider-bullet__line {
+    background-color: #00ffac;
+}
+
+body.alternate-theme .slider__text-line div,
+body.alternate-theme .slider-bullet__text,
+body.alternate-theme .slider-bullet__line,
+body.alternate-theme .scroll,
+body.alternate-theme #footer span {
+    color: #00ffac;
+    border-color: #00ffac;
+}
+
+
+
+/* work */
+
+/* 기본 테마 */
+body.default-theme .cit,
+body.default-theme .cit:before,
+body.default-theme .cit:after,
+body.default-theme .slide__number::before,
+body.default-theme .content__number::before,
+body.default-theme .extrait span:before,
+body.default-theme .extrait span:after,
+body.default-theme .slide__number,
+body.default-theme .slide__title span,
+/* 구체적인 선택자 */
+body.default-theme .slide__subtitle,
+body.default-theme .slide__side,
+body.default-theme .content__number,
+body.default-theme .content__title,
+body.default-theme .content__subtitle,
+body.default-theme .content__text span,
+body.default-theme .link a,
+body.default-theme #footer span {
+    color: #ffacaf !important;
+}
+
+/* 대체 테마 */
+body.alternate-theme .cit,
+body.alternate-theme .cit:before,
+body.alternate-theme .cit:after,
+body.alternate-theme .slide__number::before,
+body.alternate-theme .content__number::before,
+body.alternate-theme .extrait span:before,
+body.alternate-theme .extrait span:after,
+body.alternate-theme .slide__number,
+body.alternate-theme .slide__title span,
+/* 구체적인 선택자 */
+body.alternate-theme .slide__subtitle,
+body.alternate-theme .slide__side,
+body.alternate-theme .content__number,
+body.alternate-theme .content__title,
+body.alternate-theme .content__subtitle,
+body.alternate-theme .content__text span,
+body.alternate-theme .link a,
+body.alternate-theme #footer span {
+    color: #00ffac !important;
+}
+
+/* 기타 변경 사항 */
+body.default-theme .slider-bullet__line {
+    background-color: #ffacac;
+}
+
+body.default-theme #footer {
+    border-top: 1px solid #ffacac31;
+}
+
+body.alternate-theme .slider-bullet__line {
+    background-color: #00ffac;
+}
+
+body.alternate-theme #footer {
+    border-top: 1px solid #00ffac31;
+}
+
+
+/* comment */
+
+
+/* 기본 테마 */
+body.default-theme .section3,
+body.default-theme .section3 .text>div:nth-child(1),
+body.default-theme .section3 .input button,
+body.default-theme .section3 .comment__wrap .comment,
+body.default-theme .section3 .comment__wrap .comment span em {
+    color: #ffacac;
+    border-color: #ffacac61;
+}
+
+body.default-theme .section3 .input input {
+    border: 1px solid #ffffff62;
+}
+
+/* 대체 테마 */
+body.alternate-theme .section3,
+body.alternate-theme .section3 .text>div:nth-child(1),
+body.alternate-theme .section3 .input button,
+body.alternate-theme .section3 .comment__wrap .comment,
+body.alternate-theme .section3 .comment__wrap .comment span em {
+    color: #00ffac;
+    border-color: #00ffac61;
+}
+
+body.alternate-theme .section3 .input input {
+    border: 1px solid #00ffac62;
+}
+
+/* 기본 테마 */
+input::placeholder {
+    color: #ffacac;
+    font-family: "scoreDream";
+}
+
+/* 대체 테마 */
+body.alternate-theme input::placeholder {
+    color: #00ffac;
+    font-family: "scoreDream";
+}

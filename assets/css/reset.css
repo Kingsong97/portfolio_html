@@ -330,7 +330,7 @@ input::placeholder {
     font-family: "scoreDream";
 }
 
-input::-webkit-input-placeholder {
+/* input::-webkit-input-placeholder {
     color: #ffacac;
     font-family: "scoreDream";
 }
@@ -338,4 +338,4 @@ input::-webkit-input-placeholder {
 input:-ms-input-placeholder {
     color: #ffacac;
     font-family: "scoreDream";
-}
+} */

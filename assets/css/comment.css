@@ -37,6 +37,7 @@ body {
     background-color: #000;
     color: #ffacac;
     padding: 100px;
+    height: 100vh;
     position: relative;
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg');
     background-position: center;
@@ -50,12 +51,12 @@ body {
     font-family: 'PP NeueBit';
 }
 
-.section3 .text>div:nth-child(2) {
+/* .section3 .text>div:nth-child(2) {
     font-family: 'PP NeueBit';
-    font-size: 8vw;
+    font-size: 2vw;
     line-height: 0.8;
     padding-left: 5vw;
-}
+} */
 
 .section3 .text>div:nth-child(3) {
     font-size: 12vw;
@@ -68,8 +69,8 @@ body {
 }
 
 .section3 .img {
-    position: relative;
-    width: 50%;
+    width: 20%;
+    height: 80%;
     filter: grayscale();
 }
 

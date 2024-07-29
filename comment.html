@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/comment.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/color.css">
 </head>
 
-<body>
+<body class="default-theme">
     <div class="container">
         <header id="header">
             <h1>
@@ -24,12 +25,11 @@
                     <li class="active"><a href="comment.html">003/Comment</a></li>
                 </ul>
             </nav>
-            <div class="right"></div>
+            <div class="right" id="right"></div>
         </header>
         <main class="section3">
             <div class="text">
                 <div class="split">COMMENT</div>
-                <div>SONG SEONG MIN</div>
             </div>
 
             <div class="img">
@@ -97,14 +97,11 @@
             <span>comment</span>
             <span>comment</span>
             <span>comment</span>
-            <span>comment</span>
-            <span>comment</span>
-            <span>comment</span>
-            <span>comment</span>
         </footer>
         <!-- //footer -->
     </div>
 
+    <script src="assets/js/colors.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script>
         const lenis = new Lenis();
