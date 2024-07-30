@@ -200,3 +200,33 @@ body.alternate-theme input::placeholder {
     color: #00ffac;
     font-family: "scoreDream";
 }
+
+
+
+/* contact */
+
+/* 기본 테마 */
+body.default-theme #main .title,
+body.default-theme #main .stack01 p,
+body.default-theme #main .stack02 p,
+body.default-theme #main .stack03 p,
+body.default-theme .carousel--item .text-detail-title,
+body.default-theme .carousel--item .text-detail span,
+body.default-theme .carousel--progress-bar {
+    color: #ffacac;
+    border-color: #ffacac;
+
+}
+
+/* 대체 테마 */
+body.alternate-theme #main .title,
+body.alternate-theme #main .stack01 p,
+body.alternate-theme #main .stack02 p,
+body.alternate-theme #main .stack03 p,
+body.alternate-theme .carousel--item .text-detail-title,
+body.alternate-theme .carousel--item .text-detail span,
+body.alternate-theme .carousel--progress-bar {
+    color: #00ffac;
+    border-color: #00ffac;
+
+}
